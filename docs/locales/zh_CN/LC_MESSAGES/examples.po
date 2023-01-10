@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,53 +19,58 @@ msgstr ""
 
 #: ../../examples.md:1
 msgid "*attrs* by Example"
-msgstr ""
+msgstr "*attrs* 示例"
 
 #: ../../examples.md:3
 msgid "Basics"
-msgstr ""
+msgstr "基础"
 
 #: ../../examples.md:5
 msgid "The simplest possible usage is:"
-msgstr ""
+msgstr "最简单的用法是："
 
 #: ../../examples.md:20
 msgid "So in other words: *attrs* is useful even without actual attributes!"
-msgstr ""
+msgstr "换句话说：即使没有实际的属性，*attrs* 也是有用的！"
 
 #: ../../examples.md:22
 msgid "But you'll usually want some data on your classes, so let's add some:"
-msgstr ""
+msgstr "但你通常需要一些类的数据，所以让我们添加一些："
 
 #: ../../examples.md:31
 msgid ""
 "By default, all features are added, so you immediately have a fully "
 "functional data class with a nice `repr` string and comparison methods."
 msgstr ""
+"默认情况下，所有功能都被添加了，所以你马上就有了功能齐全的数据类，它有漂亮的 `repr` 字符串和比较方法。"
 
 #: ../../examples.md:44
 msgid ""
 "As shown, the generated `__init__` method allows for both positional and "
 "keyword arguments."
 msgstr ""
+"如所示，生成的 `__init__` 方法允许使用位置参数和关键字参数。"
 
 #: ../../examples.md:46
 msgid ""
 "For private attributes, *attrs* will strip the leading underscores for "
 "keyword arguments:"
 msgstr ""
+"对于私有属性，*attrs* 将去掉关键字参数的前导下划线："
 
 #: ../../examples.md:56
 msgid ""
 "If you want to initialize your private attributes yourself, you can do "
 "that too:"
 msgstr ""
+"如果你想自己初始化你的私有属性，你也可以这样做："
 
 #: ../../examples.md:70
 msgid ""
 "If you prefer to expose your privates, you can use keyword argument "
 "aliases:"
 msgstr ""
+"如果你喜欢暴露你的私有变量，你可以使用关键字参数别名："
 
 #: ../../examples.md:80
 msgid ""
@@ -73,6 +78,7 @@ msgid ""
 " in times when you want to enhance classes that are not yours (nice "
 "`__repr__` for Django models anyone?):"
 msgstr ""
+"还支持另一种定义属性的方法。这在你想要增强不是你的类的时候很有用（`__repr__` 适合 Django 模型吗？）:"
 
 #: ../../examples.md:95
 msgid ""
@@ -80,6 +86,7 @@ msgid ""
 "you](https://www.youtube.com/watch?v=3MNVP9-hglc), but *attrs* will still"
 " do what you'd hope for:"
 msgstr ""
+"[子类化](https://www.youtube.com/watch?v=3MNVP9-hglc)对你是不好的，但是 *attrs* 仍然会做你所希望的："
 
 #: ../../examples.md:118
 msgid ""
@@ -87,34 +94,39 @@ msgid ""
 "new APIs, don't play well with multiple inheritance so we don't use them "
 "in the example."
 msgstr ""
+"{term}`插槽类<slotted classes>` 是新 api 的默认类，它不能很好地处理多重继承，因此在示例中没有使用它们。"
 
 #: ../../examples.md:120
 msgid ""
 "The order of the attributes is defined by the "
 "[MRO](https://www.python.org/download/releases/2.3/mro/)."
 msgstr ""
+"属性的顺序由 [MRO](https://www.python.org/download/releases/2.3/mro/) 定义。"
 
 #: ../../examples.md:123
 msgid "Keyword-only Attributes"
-msgstr ""
+msgstr "Keyword-only 属性"
 
 #: ../../examples.md:125
 msgid ""
 "You can also add [keyword-only](https://docs.python.org/3/glossary.html"
 "#keyword-only-parameter) attributes:"
 msgstr ""
+"你也可以添加[仅关键字](https://docs.python.org/3/glossary.html#keyword-only-parameter)属性:"
 
 #: ../../examples.md:139
 msgid ""
 "`kw_only` may also be specified at decorator level, and will apply to all"
 " attributes:"
 msgstr ""
+"`kw_only` 也可以在装饰器级别指定，并且将应用于所有属性："
 
 #: ../../examples.md:154
 msgid ""
 "If you create an attribute with `init=False`, the `kw_only` argument is "
 "ignored."
 msgstr ""
+"如果你用 `init=False` 创建属性，`kw_only` 参数将被忽略。"
 
 #: ../../examples.md:156
 msgid ""
@@ -122,16 +134,18 @@ msgid ""
 "default values, even if the base class defines attributes with default "
 "values:"
 msgstr ""
+"仅关键字属性允许子类添加没有默认值的属性，即使基类定义了具有默认值的属性："
 
 #: ../../examples.md:173
 msgid ""
 "If you don't set `kw_only=True`, then there is no valid attribute "
 "ordering, and you'll get an error:"
 msgstr ""
+"如果你不设置 `kw_only=True`，那么没有有效的属性排序，你会得到错误："
 
 #: ../../examples.md:189
 msgid "Converting to Collections Types"
-msgstr ""
+msgstr "转换为集合类型"
 
 #: ../../examples.md:191
 msgid ""
@@ -139,6 +153,7 @@ msgid ""
 " that class into a {class}`dict` (for example if you want to serialize it"
 " to JSON):"
 msgstr ""
+"当你有带有数据的类时，将这个类转换为 {class}`dict` 通常是非常方便的（例如，如果你想将它序列化为 JSON）："
 
 #: ../../examples.md:199
 msgid ""
@@ -146,6 +161,7 @@ msgid ""
 "{func}`attrs.asdict` offers a callback that decides whether an attribute "
 "should be included:"
 msgstr ""
+"有些字段不能或不应该被转换。为此，{func}`attrs.asdict` 提供了回调函数来决定是否应该包含属性："
 
 #: ../../examples.md:218
 msgid ""
@@ -153,20 +169,23 @@ msgid ""
 "or [`exclude`](attrs.filters.exclude) certain types or attributes, "
 "*attrs* ships with a few helpers:"
 msgstr ""
+"对于你想要 [`include`](attrs.filters.include) 或 [`exclude`](attrs.filters.exclude) 某些类型或属性的常见情况， *attrs* 附带了一些辅助程序："
 
 #: ../../examples.md:245
 msgid "Other times, all you want is a tuple and *attrs* won't let you down:"
 msgstr ""
+"其他时候，你想要的只是元组， *attrs* 不会让你失望:"
 
 #: ../../examples.md:268
 msgid ""
 "For more advanced transformations and conversions, we recommend you look "
 "at a companion library (such as [*cattrs*](https://catt.rs/))."
 msgstr ""
+"对于更高级的转换和转换，建议查看配套库（例如 [*cattrs*](https://catt.rs/)）。"
 
 #: ../../examples.md:271
 msgid "Defaults"
-msgstr ""
+msgstr "默认值"
 
 #: ../../examples.md:273
 msgid ""
@@ -175,6 +194,7 @@ msgid ""
 "accidentally used `def f(arg=[])`?). *attrs* has you covered in both "
 "cases:"
 msgstr ""
+"有时你希望初始化式有默认值。有时你甚至想要可变对象作为默认值（曾经不小心使用 `def f(arg=[])`？）*attrs* 在这两种情况下都覆盖了："
 
 #: ../../examples.md:316
 msgid ""
@@ -183,6 +203,8 @@ msgid ""
 "post](https://web.archive.org/web/20210130220433/http://as.ynchrono.us/2014/12"
 "/asynchronous-object-initialization.html)."
 msgstr ""
+"关于构造对象的类方法为什么如此棒的更多信息，可以在这篇见解深刻的[博客文章](https://web.archive.org/web/20210130220433/http://as.ynchrono.us/2014/12"
+"/asynchronous-object-initialization.html)中找到。"
 
 #: ../../examples.md:318
 msgid ""
@@ -191,6 +213,8 @@ msgid ""
 "partially initialized instance which enables you to base a default value "
 "on other attributes:"
 msgstr ""
+"默认工厂也可以使用 `factory` 参数来设置 {func}`~attrs.field`，并使用装饰器。"
+"该方法接收部分初始化的实例，使您能够基于其他属性的默认值："
 
 #: ../../examples.md:334
 msgid ""
@@ -199,10 +223,12 @@ msgid ""
 "result, annotating an attribute with a type is *not* enough if you use "
 "`@default`."
 msgstr ""
+"请记住，decorator方法仅在指定了 {func}`~attrs.field` 的属性时才有效。"
+"因此，如果使用 `@default`，仅用类型注释属性是不够的。"
 
 #: ../../examples.md:339
 msgid "Validators"
-msgstr ""
+msgstr "验证器"
 
 #: ../../examples.md:341
 msgid ""
@@ -210,24 +236,26 @@ msgid ""
 " initialize your instance according to the arguments!), it can come in "
 "handy to do some kind of validation on the arguments."
 msgstr ""
+"尽管初始化器应该尽可能少地执行操作（理想情况是：只根据参数初始化实例！），但对参数进行某种验证可能会派上用场。"
 
 #: ../../examples.md:343
 msgid ""
 "*attrs* offers two ways to define validators for each attribute and it's "
 "up to you to choose which one suits your style and project better."
 msgstr ""
+"*attrs* 为每个属性提供了两种定义验证器的方法，由您选择哪一种更适合您的风格和项目。"
 
 #: ../../examples.md:345
 msgid "You can use a decorator:"
-msgstr ""
+msgstr "可以使用装饰器："
 
 #: ../../examples.md:363
 msgid "...or a callable..."
-msgstr ""
+msgstr "... 或者回调 ..."
 
 #: ../../examples.md:384
 msgid "...or both at once:"
-msgstr ""
+msgstr "... 或者二者兼有 ..."
 
 #: ../../examples.md:406
 msgid ""
@@ -236,12 +264,15 @@ msgid ""
 "if you use `@validator`, it is *not* enough to annotate said attribute "
 "with a type."
 msgstr ""
+"请注意，decorator 方法仅在以下情况下有效——且仅在以下情况下有效！——有问题的属性有指定的 {func}`~attrs.field`。"
+"因此，如果使用 `@validator`，仅用类型注释该属性是不够的。"
 
 #: ../../examples.md:409
 msgid ""
 "*attrs* ships with a bunch of validators, make sure to [check them out"
 "](api-validators) before writing your own:"
 msgstr ""
+"*attrs* 附带了一堆验证器，在编写自己的验证器之前一定要[检查它们](api-validators)："
 
 #: ../../examples.md:423
 msgid ""
@@ -250,14 +281,16 @@ msgid ""
 "initialization by default -- not when you set an attribute. This behavior"
 " can be changed using the `on_setattr` argument."
 msgstr ""
+"请注意，如果你使用  {func}`attr.s` （而不是 {func}`attrs.define`）来定义你的类，默认情况下，验证器只在初始化时运行——而不是在设置属性时运行。"
+"可以使用 `on_setattr` 参数更改此行为。"
 
 #: ../../examples.md:426
 msgid "Check out {ref}`validators` for more details."
-msgstr ""
+msgstr "查阅 {ref}`validators` 以了解更多细节。"
 
 #: ../../examples.md:429
 msgid "Conversion"
-msgstr ""
+msgstr "转换器"
 
 #: ../../examples.md:431
 msgid ""
@@ -266,24 +299,26 @@ msgid ""
 "This can be useful for doing type-conversions on values that you don't "
 "want to force your callers to do."
 msgstr ""
+"属性可以指定 `converter` 函数，该函数将被属性的传入值调用，以获得要使用的新值。这对于对不希望强制调用方执行的值进行类型转换非常有用。"
 
 #: ../../examples.md:443
 msgid "Please note that converters only run on initialization."
-msgstr ""
+msgstr "请注意转换器只在初始化时运行。"
 
 #: ../../examples.md:445
 msgid "Check out {ref}`converters` for more details."
-msgstr ""
+msgstr "查阅 {ref}`converters` 以了解更多细节。"
 
 #: ../../examples.md:449
 msgid "Metadata"
-msgstr ""
+msgstr "元数据"
 
 #: ../../examples.md:451
 msgid ""
 "All *attrs* attributes may include arbitrary metadata in the form of a "
 "read-only dictionary."
 msgstr ""
+"所有 *attrs* 属性都可以包括只读字典形式的任意元数据。"
 
 #: ../../examples.md:465
 msgid ""
@@ -292,16 +327,19 @@ msgid ""
 "the normal dictionary rules: Keys need to be hashable, and both keys and "
 "values are recommended to be immutable."
 msgstr ""
+"元数据不被 *attrs* 使用，是为了在第三方库中启用丰富的功能。"
+"元数据字典遵循正常的字典规则：键必须是可哈希的，键和值都建议是不可变的。"
 
 #: ../../examples.md:469
 msgid ""
 "If you're the author of a third-party library with *attrs* integration, "
 "please see [*Extending Metadata*](extending-metadata)."
 msgstr ""
+"如果您是集成了 *attrs* 的第三方库的作者，请参见 [*Extending Metadata*](extending-metadata)。"
 
 #: ../../examples.md:472
 msgid "Types"
-msgstr ""
+msgstr "类型"
 
 #: ../../examples.md:474
 msgid ""
@@ -309,18 +347,21 @@ msgid ""
 "either the *type* argument to {func}`attr.ib` or using "
 "{pep}`526`-annotations:"
 msgstr ""
+"*attrs* 还允许您使用 {func}`attr.ib` 的 *type* 参数或使用 {pep}`526` -annotations将类型与属性关联起来："
 
 #: ../../examples.md:491
 msgid ""
 "If you don't mind annotating *all* attributes, you can even drop the "
 "`attrs.field` and assign default values instead:"
 msgstr ""
+"如果您不介意注解所有属性，您甚至可以删除 `attrs.field` 并指定默认值："
 
 #: ../../examples.md:517
 msgid ""
 "The generated `__init__` method will have an attribute called "
 "`__annotations__` that contains this type information."
 msgstr ""
+"生成的 `__init__` 方法将有名为 `__annotations__` 的属性，该属性包含该类型信息。"
 
 #: ../../examples.md:519
 msgid ""
@@ -329,6 +370,7 @@ msgid ""
 "{func}`attrs.resolve_types`. This will replace the *type* attribute in "
 "the respective fields."
 msgstr ""
+"如果你的注解包含字符串（例如前向引用），你可以在所有的引用都被使用 {func}`attrs.resolve_types` 定义之后解析这些字符串。这将替换各自字段中的 *type* 属性。"
 
 #: ../../examples.md:548
 msgid ""
@@ -337,6 +379,8 @@ msgid ""
 " type you need a forward reference to (so `'list[A]'` instead of "
 "`list['A']`). This is a limitation of the Python typing system."
 msgstr ""
+"如果您发现自己使用字符串类型注解来处理前向引用，请将整个类型注释用引号括起来，而不是只将需要前向引用的类型括起来（用 `'list[A]'` 而不是 `list['A']`）。"
+"这是 Python 类型系统的限制。"
 
 #: ../../examples.md:553
 msgid ""
@@ -344,10 +388,11 @@ msgid ""
 "metadata. However it's useful for writing your own validators or "
 "serialization frameworks."
 msgstr ""
+"*attrs* 本身没有任何工作在类型元数据之上的特性。但是，它对于编写自己的验证器或序列化框架非常有用。"
 
 #: ../../examples.md:558
 msgid "Slots"
-msgstr ""
+msgstr "插槽"
 
 #: ../../examples.md:560
 msgid ""
@@ -356,14 +401,16 @@ msgid ""
 "matter of using {func}`attrs.define` or passing `slots=True` to "
 "{func}`attr.s`:"
 msgstr ""
+"{term}`插槽类 <slotted classes>` 在 CPython 上有几个优点。"
+"手工定义 `__slots__` 很乏味，在 *attrs* 中，只需要使用 {func}`attrs.define` 或将 `slots=True` 传递给 {func}`attr.s`："
 
 #: ../../examples.md:572
 msgid "{func}`~attrs.define` sets `slots=True` by default."
-msgstr ""
+msgstr "{func}`~attrs.define` 默认设置 `slots=True`。"
 
 #: ../../examples.md:575
 msgid "Immutability"
-msgstr ""
+msgstr "不可变性"
 
 #: ../../examples.md:577
 msgid ""
@@ -372,6 +419,7 @@ msgid ""
 "programming and is generally a very good thing. If you'd like to enforce "
 "it, *attrs* will try to help:"
 msgstr ""
+"有时实例在实例化后不应该更改。不可变性在函数式编程中特别流行，通常是一件非常好的事情。如果你想强制执行它，*attrs* 将尝试帮助："
 
 #: ../../examples.md:596
 msgid ""
@@ -380,6 +428,8 @@ msgid ""
 "useful for long-lived objects that should never change; like "
 "configurations for example."
 msgstr ""
+"请注意，真正的不可变性在 Python 中是不可能的，但它会让你[达到](how-frozen) 99%。"
+"就其本身而言，不可变类对于永远不应该改变的长生命对象非常有用；比如 configurations。"
 
 #: ../../examples.md:599
 msgid ""
@@ -388,22 +438,26 @@ msgid ""
 "is called [assoc](https://clojuredocs.org/clojure.core/assoc) and *attrs*"
 " shamelessly imitates it: `attr.evolve`:"
 msgstr ""
+"为了在常规程序流中使用它们，您需要一种方法来轻松地创建具有更改属性的新实例。"
+"在 Clojure 中，这个函数被称为 [assoc](https://clojuredocs.org/clojure.core/assoc), *attrs* 无耻地模仿它（`attr.evolve`）："
 
 #: ../../examples.md:620
 msgid "Other Goodies"
-msgstr ""
+msgstr "其他"
 
 #: ../../examples.md:622
 msgid ""
 "Sometimes you may want to create a class programmatically. *attrs* gives "
 "you {func}`attrs.make_class` for that:"
 msgstr ""
+"有时您可能希望以编程方式创建类。*attrs* 给你 {func}`attrs.make_class`："
 
 #: ../../examples.md:636
 msgid ""
 "You can still have power over the attributes if you pass a dictionary of "
 "name: {func}`~attrs.field` mappings and can pass arguments to `@attr.s`:"
 msgstr ""
+"如果你传递 name: {func}`~attrs.field` 映射的字典，你仍然可以对属性有权力，并且可以将参数传递给 `@attr.s`："
 
 #: ../../examples.md:651
 msgid ""
@@ -411,6 +465,7 @@ msgid ""
 "and it needs to be a subclass of something else than {class}`object`, use"
 " the `bases` argument:"
 msgstr ""
+"如果你需要动态地使用 {func}`~attrs.make_class` 创建类，并且它需要是 {class}`object` 以外的其他类的子类，请使用 `bases` 参数："
 
 #: ../../examples.md:662
 msgid ""
@@ -420,10 +475,12 @@ msgid ""
 "`__attrs_post_init__` method in your class. It will get called at the end"
 " of the generated `__init__` method."
 msgstr ""
+"有时候，你想让你的类的 `__init__` 方法做更多的事情，而不仅仅是初始化、验证等，这些都是在使用 `@define` 时自动完成的。"
+"要做到这一点，只需在类中定义 `__attrs_post_init__` 方法。它将在生成的 `__init__` 方法的末尾被调用。"
 
 #: ../../examples.md:682
 msgid "You can exclude single attributes from certain methods:"
-msgstr ""
+msgstr "你可以从某些方法中排除单个属性："
 
 #: ../../examples.md:693
 msgid ""
@@ -431,4 +488,4 @@ msgid ""
 " a specific attribute, specify a custom callable to be used instead of "
 "the `repr()` built-in function:"
 msgstr ""
-
+"另外，为了影响生成的 `__repr__()` 方法格式化特定属性的方式，可以指定自定义可调用对象来代替 `repr()` 内置函数："

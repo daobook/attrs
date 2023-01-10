@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../why.md:1
 msgid "Why not…"
-msgstr ""
+msgstr "为什么不 ..."
 
 #: ../../why.md:3
 msgid ""
@@ -29,10 +29,12 @@ msgid ""
 "type annotations and hence Data Classes, but it masterfully illustrates "
 "the appeal of class-building packages."
 msgstr ""
+"如果你想知道为什么 *attrs* 很棒，可以看看 [*The One Python Library Everyone Needs*](https://glyph.twistedmatrix.com/2016/08/attrs.html)。"
+"它早于类型注释，因此也早于数据类，但它巧妙地说明了类构建包的吸引力。"
 
 #: ../../why.md:7
 msgid "… Data Classes?"
-msgstr ""
+msgstr "... 数据类？"
 
 #: ../../why.md:9
 msgid ""

@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../extending.md:1
 msgid "Extending"
-msgstr ""
+msgstr "扩展"
 
 #: ../../extending.md:3
 msgid ""
@@ -27,10 +27,11 @@ msgid ""
 "It's a tuple of {class}`attrs.Attribute` carrying metadata about each "
 "attribute."
 msgstr ""
+"每个 *attrs* 装饰的类都有 `__attrs_attrs__` 类属性。它是 {class}`attrs.Attribute` 的元组，携带关于每个属性的元数据。"
 
 #: ../../extending.md:6
 msgid "So it is fairly simple to build your own decorators on top of *attrs*:"
-msgstr ""
+msgstr "因此，在 *attrs* 之上构建你自己的装饰器是相当简单的："
 
 #: ../../extending.md:21
 msgid ""
@@ -38,16 +39,18 @@ msgid ""
 "first because it puts `__attrs_attrs__` in place! That means that is has "
 "to come *after* your decorator because:"
 msgstr ""
+"必须首先应用 {func}`attrs.define` / {func}`attr.s` 装饰器，"
+"因为它将 `__attrs_attrs__` 放置在适当的位置！这意味着它必须在你的装饰师之后出现，因为："
 
 #: ../../extending.md:31
 msgid ""
 "is just [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) "
 "for:"
-msgstr ""
+msgstr "仅仅是[语法糖](https://en.wikipedia.org/wiki/Syntactic_sugar)："
 
 #: ../../extending.md:42
 msgid "Wrapping the Decorator"
-msgstr ""
+msgstr "包装装饰器"
 
 #: ../../extending.md:44
 msgid ""

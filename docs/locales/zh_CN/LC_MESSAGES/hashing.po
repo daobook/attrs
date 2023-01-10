@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../hashing.md:1
 msgid "Hashing"
-msgstr ""
+msgstr "哈希"
 
 #: ../../hashing.md:3
 msgid "Hash Method Generation"
-msgstr ""
+msgstr "哈希方法生成"
 
 #: ../../hashing.md:6
 msgid ""
@@ -31,22 +31,26 @@ msgid ""
 "parameter yourself. Leave it at `None` which means that *attrs* will do "
 "the right thing for you, depending on the other parameters:"
 msgstr ""
+"最重要的主题是永远不要自己设置 `@attrs.define(unsafe_hash=X)` 参数。"
+"保留为 `None`，这意味着 *attrs* 将为您做正确的事情，这取决于其他参数："
 
 #: ../../hashing.md:9
 msgid "If you want to make objects hashable by value: use `@define(frozen=True)`."
-msgstr ""
+msgstr "如果你想让对象按值哈希：使用 `@define(frozen=True)`。"
 
 #: ../../hashing.md:10
 msgid ""
 "If you want hashing and equality by object identity: use "
 "`@define(eq=False)`"
 msgstr ""
+"如果你想通过对象标识来哈希和相等：使用 `@define(eq=False)`"
 
 #: ../../hashing.md:12
 msgid ""
 "Setting `unsafe_hash` yourself can have unexpected consequences so we "
 "recommend to tinker with it only if you know exactly what you're doing."
 msgstr ""
+"自己设置 `unsafe_hash` 可能会产生意想不到的后果，所以建议只有在你确切知道自己在做什么的情况下才修改它。"
 
 #: ../../hashing.md:15
 msgid ""

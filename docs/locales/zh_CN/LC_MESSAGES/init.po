@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../init.md:1
 msgid "Initialization"
-msgstr ""
+msgstr "初始化"
 
 #: ../../init.md:3
 msgid ""
@@ -28,6 +28,8 @@ msgid ""
 "and you should think about what the class needs and not how it is going "
 "to be instantiated."
 msgstr ""
+"在 Python 中，实例初始化发生在 `__init__` 方法中。"
+"一般来说，你应该尽可能少地保留其中的逻辑，你应该考虑类需要什么，而不是它将如何被实例化。"
 
 #: ../../init.md:6
 msgid ""
@@ -35,16 +37,18 @@ msgid ""
 "data for the class unnecessarily couples your new class with the old "
 "class which makes it harder to test and also will cause problems later."
 msgstr ""
+"将复杂的对象传入 `__init__`，然后使用它们为类派生数据，不必要地将新类与旧类耦合起来，这使得测试更加困难，也会在以后引起问题。"
 
 #: ../../init.md:8
 msgid ""
 "So assuming you use an ORM and want to extract 2D points from a row "
 "object, do not write code like this:"
 msgstr ""
+"所以假设你使用 ORM 并想要从行对象中提取 2D 点，不要写这样的代码："
 
 #: ../../init.md:19
 msgid "Instead, write a {obj}`classmethod` that will extract it for you:"
-msgstr ""
+msgstr "而是，写 {obj}`classmethod` 来为你提取它："
 
 #: ../../init.md:34
 msgid ""
@@ -52,10 +56,11 @@ msgid ""
 "your tests and you can have as many smart creation helpers as you want, "
 "in case more data sources appear."
 msgstr ""
+"现在，您可以实例化 `Point`，而不必在测试中创建虚假的行对象，并且您可以拥有尽可能多的智能创建帮助程序，以防出现更多数据源。"
 
 #: ../../init.md:36
 msgid "For similar reasons, we strongly discourage from patterns like:"
-msgstr ""
+msgstr "出于类似的原因，强烈反对使用以下模式："
 
 #: ../../init.md:42
 msgid ""
@@ -66,6 +71,8 @@ msgid ""
 "and classmethods as a filter between reality and what's best for you to "
 "work with."
 msgstr ""
+"它将您的类与数据库数据模型耦合。尝试以一种干净和方便使用的方式设计你的类——而不是基于你的数据库格式。"
+"数据库的格式随时都可能改变，你会陷入一个很难改变的糟糕的类设计中。把函数和类方法作为现实和最适合你的工作之间的过滤器。"
 
 #: ../../init.md:48
 msgid ""
@@ -73,12 +80,14 @@ msgid ""
 " about validators and converters) are powerful, they are **not** intended"
 " to replace a fully-featured serialization or validation system."
 msgstr ""
+"虽然 *attrs* 的初始化概念(包括下面关于验证器和转换器的部分)功能强大，但它们并不打算取代功能齐全的序列化或验证系统。"
 
 #: ../../init.md:50
 msgid ""
 "We want to help you to write a `__init__` that you'd write by hand, but "
 "with less boilerplate."
 msgstr ""
+"我们想帮助你写 `__init__`，你会手写，但有更少的样板文件。"
 
 #: ../../init.md:52
 msgid ""
@@ -88,10 +97,12 @@ msgid ""
 "extensions](https://github.com/python-attrs/attrs/wiki/Extensions-to-"
 "attrs)."
 msgstr ""
+"如果您正在为您的 *attrs* 类寻找强大而非侵入式的序列化和验证，请查看兄弟项目 [*cattrs*](https://catt.rs/) 或"
+"[第三方扩展](https://github.com/python-attrs/attrs/wiki/Extensions-to-attrs)。"
 
 #: ../../init.md:57
 msgid "Private Attributes and Aliases"
-msgstr ""
+msgstr "私有属性和别名"
 
 #: ../../init.md:59
 msgid ""
@@ -102,6 +113,9 @@ msgid ""
 "the underscores from the name when writing the `__init__` method "
 "signature:"
 msgstr ""
+"人们容易感到困惑的一件事是如何处理以下划线开头的私有属性。"
+"*attrs* 遵循这样的原则，即[没有私有参数](https://github.com/hynek/characteristic/issues/6)，"
+"并在编写 `__init__` 方法签名时从名称中去掉下划线："
 
 #: ../../init.md:72
 msgid ""
@@ -109,12 +123,14 @@ msgid ""
 "important to be aware of it because it can lead to surprising syntax "
 "errors:"
 msgstr ""
+"这真的没有对错之分，只是趣味的问题。但注意它很重要，因为它可能会导致令人惊讶的语法错误："
 
 #: ../../init.md:84
 msgid ""
 "In this case a valid attribute name `_1` got transformed into an invalid "
 "argument name `1`."
 msgstr ""
+"在这种情况下，有效的属性名 `_1` 被转换为无效的参数名 `1`。"
 
 #: ../../init.md:86
 msgid ""
@@ -123,10 +139,12 @@ msgid ""
 " to override private attribute handling, or make other arbitrary changes "
 "to `__init__` argument names."
 msgstr ""
+"如果您的喜好不同，您可以使用 {func}`attrs.field` 的 *alias* 参数来显式地设置参数名。"
+"这可以用来覆盖私有属性处理，或对 `__init__` 参数名进行其他任意更改。"
 
 #: ../../init.md:100
 msgid "Defaults"
-msgstr ""
+msgstr "默认值"
 
 #: ../../init.md:102
 msgid ""
@@ -134,10 +152,11 @@ msgid ""
 "sometimes, certain attributes aren't even intended to be passed but you "
 "want to allow for customization anyways for easier testing."
 msgstr ""
+"有时候你不想把所有属性值都传递给类。有时，某些属性甚至不打算传递，但你希望允许自定义，以便更容易测试。"
 
 #: ../../init.md:105
 msgid "This is when default values come into play:"
-msgstr ""
+msgstr "这就是默认值发挥作用的时候："
 
 #: ../../init.md:122
 msgid ""
@@ -145,16 +164,18 @@ msgid ""
 "property! -- doesn't have the same name as the attribute, otherwise it "
 "would overwrite the attribute definition."
 msgstr ""
+"重要的是，装饰方法——或任何其他方法或属性！——不能与属性同名，否则会覆盖属性定义。"
 
 #: ../../init.md:124
 msgid ""
 "Please note that as with function and method signatures, `default=[]` "
 "will *not* do what you may think it might do:"
 msgstr ""
+"请注意，与函数和方法签名一样，`default=[]` 不会做你可能认为它可能做的事情："
 
 #: ../../init.md:137
 msgid "This is why *attrs* comes with factory options."
-msgstr ""
+msgstr "这就是为什么 *attrs* 带有工厂选项。"
 
 #: ../../init.md:140
 msgid ""
@@ -163,10 +184,11 @@ msgid ""
 "attributes, the `self` object may not be fully initialized when they're "
 "called."
 msgstr ""
+"请注意，基于装饰器的默认值有一个问题：它们在设置属性时执行，这意味着根据属性的顺序，`self` 对象在被调用时可能没有完全初始化。"
 
 #: ../../init.md:143
 msgid "Therefore you should use `self` as little as possible."
-msgstr ""
+msgstr "因此，你应该尽量少用 `self`。"
 
 #: ../../init.md:145
 msgid ""
@@ -174,10 +196,11 @@ msgid ""
 "attrs/attrs/issues/289) by what happens if you pass partially initialized"
 " objects around."
 msgstr ""
+"即使是最聪明的人也会对传递部分初始化的对象所发生的情况感到[困惑](https://github.com/python-attrs/attrs/issues/289)。"
 
 #: ../../init.md:150
 msgid "Validators"
-msgstr ""
+msgstr "验证器"
 
 #: ../../init.md:152
 msgid ""
@@ -185,60 +208,66 @@ msgid ""
 " resulting instance for invariants. This is why *attrs* has the concept "
 "of validators."
 msgstr ""
+"另一件肯定属于 `__init__` 的事情是检查结果实例中的不变量。这就是为什么 *attrs* 有验证器的概念。"
 
 #: ../../init.md:156
 msgid "Decorator"
-msgstr ""
+msgstr "装饰器"
 
 #: ../../init.md:158
 msgid ""
 "The most straightforward way is using the attribute's `validator` method "
 "as a decorator."
 msgstr ""
+"最直接的方法是使用属性的 `validator` 方法作为装饰器。"
 
 #: ../../init.md:160
 msgid "The method has to accept three arguments:"
-msgstr ""
+msgstr "该方法必须接受三个参数："
 
 #: ../../init.md:162
 msgid "the *instance* that's being validated (aka `self`),"
-msgstr ""
+msgstr "被验证的 *instance* (又名 `self`)"
 
 #: ../../init.md:163
 msgid "the *attribute* that it's validating, and finally"
-msgstr ""
+msgstr "它正在验证的 *attribute*，最后"
 
 #: ../../init.md:164
 msgid "the *value* that is passed for it."
-msgstr ""
+msgstr "传递给它的 *value*。"
 
 #: ../../init.md:166
 msgid ""
 "These values are passed as *positional arguments*, therefore their names "
 "don't matter."
 msgstr ""
+"这些值作为位置参数传递，因此它们的名称无关紧要。"
 
 #: ../../init.md:168
 msgid ""
 "If the value does not pass the validator's standards, it just raises an "
 "appropriate exception."
 msgstr ""
+"如果值没有通过验证器的标准，就会引发适当的异常。"
 
 #: ../../init.md:186
 msgid ""
 "Again, it's important that the decorated method doesn't have the same "
 "name as the attribute and that the {func}`attrs.field` helper is used."
 msgstr ""
+"同样重要的是，修饰过的方法没有与属性相同的名称，并且使用了 {func}`attrs.field` 辅助器。"
 
 #: ../../init.md:189
 msgid "Callables"
-msgstr ""
+msgstr "回调"
 
 #: ../../init.md:191
 msgid ""
 "If you want to re-use your validators, you should have a look at the "
 "`validator` argument to {func}`attrs.field`."
 msgstr ""
+"如果希望重用验证器，应该查看 {func}`attrs.field` 的验证器参数。"
 
 #: ../../init.md:193
 msgid ""
@@ -247,12 +276,15 @@ msgid ""
 "decorator approach. Also as with the decorator approach, they are passed "
 "as *positional arguments* so you can name them however you want."
 msgstr ""
+"它接受一个可调用对象或一组可调用对象(通常是函数)，并将它们视为与装饰器方法接收相同参数的验证器。"
+"同样，与装饰器方法一样，它们作为位置参数传递，因此您可以随心所欲地命名它们。"
 
 #: ../../init.md:196
 msgid ""
 "Since the validators run *after* the instance is initialized, you can "
 "refer to other attributes while validating:"
 msgstr ""
+"由于验证器在实例初始化后运行，所以在验证时可以引用其他属性："
 
 #: ../../init.md:216
 msgid ""
@@ -260,6 +292,7 @@ msgid ""
 "{obj}`attrs.validators.and_` validator: if you pass a list, all "
 "validators have to pass."
 msgstr ""
+"这个例子还展示了使用 {obj}`attrs.validators.and_` 的一些语法技巧，如果你传递列表，所有的验证器都必须通过。"
 
 #: ../../init.md:218
 msgid ""
@@ -269,30 +302,35 @@ msgid ""
 "[`attrs.frozen`](attrs.frozen), *attrs* will run the validators even when"
 " setting the attribute."
 msgstr ""
+"*attrs* 不会拦截你对这些属性的更改，但你总是可以在任何实例上调用 {func}`attrs.validate` 来验证它仍然有效："
+"当使用 {func}`attrs.define` 或 [`attrs.frozen`](attrs.frozen) 时，*attrs* 即使在设置属性时也会运行验证器。"
 
 #: ../../init.md:229
 msgid ""
 "*attrs* ships with a bunch of validators, make sure to [check them out]( "
 "api-validators) before writing your own:"
 msgstr ""
+"*attrs* 附带了一堆验证器，在编写自己的验证器之前一定要[检查它们](api-validators)："
 
 #: ../../init.md:243
 msgid ""
 "Of course you can mix and match the two approaches at your convenience. "
 "If you define validators both ways for an attribute, they are both ran:"
 msgstr ""
+"当然，你可以在方便的时候混合搭配这两种方法。"
+"如果你用两种方式为一个属性定义验证器，它们都会被运行："
 
 #: ../../init.md:266
 msgid "And finally you can disable validators globally:"
-msgstr ""
+msgstr "最后，你可以全局禁用验证器："
 
 #: ../../init.md:279
 msgid "You can achieve the same by using the context manager:"
-msgstr ""
+msgstr "你可以通过使用上下文管理器来达到同样的效果："
 
 #: ../../init.md:293
 msgid "Converters"
-msgstr ""
+msgstr "转换器"
 
 #: ../../init.md:295
 msgid ""

@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,19 +19,21 @@ msgstr ""
 
 #: ../../types.md:1
 msgid "Type Annotations"
-msgstr ""
+msgstr "类型注解"
 
 #: ../../types.md:3
 msgid ""
 "*attrs* comes with first class support for type annotations for both "
 "Python 3.6 ({pep}`526`) and legacy syntax."
 msgstr ""
+"*attrs* 附带了对 Python 3.6 ({pep}`526`)和遗留语法的类型注释的第一类支持。"
 
 #: ../../types.md:5
 msgid ""
 "However they will forever remain *optional*, therefore the example from "
 "the README could also be written as:"
 msgstr ""
+"然而，它们永远是 *可选的*，因此 README 中的例子也可以写成："
 
 #: ../../types.md:20
 msgid ""
@@ -39,12 +41,14 @@ msgid ""
 " you choose to use type annotations, you **must** annotate **all** "
 "attributes!"
 msgstr ""
+"您可以在这些方法中自由选择，但是请记住，如果您选择使用类型注解，则必须注解所有属性！"
 
 #: ../../types.md:24
 msgid ""
 "Even when going all-in on type annotations, you will need "
 "{func}`attrs.field` for some advanced features though."
 msgstr ""
+"即使完全使用类型注释，也需要 {func}`attrs.field` 来实现一些高级特性。"
 
 #: ../../types.md:26
 msgid ""
@@ -53,12 +57,14 @@ msgid ""
 "back. All the decorators are implemented using an object that is returned"
 " by the call to {func}`attrs.field`."
 msgstr ""
+"其中一个特性是基于装饰器的特性，如默认值。重要的是要记住，*attrs* 不会在你背后施任何魔法。所有装饰器都是使用调用 {func}`attrs.field` 返回的对象实现的。"
 
 #: ../../types.md:30
 msgid ""
 "Attributes that only carry a class annotation do not have that object so "
 "trying to call a method on it will inevitably fail."
 msgstr ""
+"只带有类注释的属性没有该对象，因此试图对其调用方法将不可避免地失败。"
 
 #: ../../types.md:34
 msgid ""
@@ -66,6 +72,7 @@ msgid ""
 "that can be queried from the class and they aren't used for anything out "
 "of the box!"
 msgstr ""
+"请注意，类型(无论如何添加)只是可以从类中查询的元数据，它们不能用于任何开箱即用的东西！"
 
 #: ../../types.md:36
 msgid ""
@@ -78,6 +85,10 @@ msgid ""
 "you can call {func}`attrs.resolve_types` which will update the attribute "
 "in place."
 msgstr ""
+"因为 Python 不允许在定义类之前引用类对象，所以类型可以定义为字符串字面量，即所谓的 *前向引用* （forward references）({pep}`526`)。"
+"从 Python 3.7 开始，您可以使用 `from __future__ import annotations` ({pep}`563`)为整个模块自动启用此功能。"
+"在本例中，*attrs* 只是将这些字符串字面量放入类型属性中。"
+"如果需要将这些解析为真实类型，可以调用 {func}`attrs.resolve_types`，它将在适当的位置更新属性。"
 
 #: ../../types.md:42
 msgid ""
@@ -85,6 +96,7 @@ msgid ""
 "with tools like [*Mypy*], [*pytype*], or [*Pyright*] that have dedicated "
 "support for *attrs* classes."
 msgstr ""
+"但在实践中，类型在与 [*Mypy*], [*pytype*] 或  [*Pyright*] 等工具结合使用时表现出最大的用处，这些工具专门支持 *attrs* 类。"
 
 #: ../../types.md:44
 msgid ""
@@ -92,6 +104,7 @@ msgid ""
 "features in the Python ecosystem and helps you write *correct* and "
 "*verified self-documenting* code."
 msgstr ""
+"静态类型的添加无疑是 Python 生态系统中最令人兴奋的特性之一，它可以帮助您编写正确且经过验证的 self-documenting 代码。"
 
 #: ../../types.md:46
 msgid ""
@@ -100,6 +113,7 @@ msgid ""
 "World*](https://www.youtube.com/watch?v=pMgmKJyWKn8) at PyCon US 2018 "
 "that will help you to get started in no time."
 msgstr ""
+"如果你不知道从哪里开始，Carl Meyer 在 PyCon US 2018 上做了关于[真实世界中的类型检查](https://www.youtube.com/watch?v=pMgmKJyWKn8) Python 的演讲，这将帮助你立即开始。"
 
 #: ../../types.md:49
 msgid "Mypy"

@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../overview.md:1
 msgid "Overview"
-msgstr ""
+msgstr "概述"
 
 #: ../../overview.md:3
 msgid ""
@@ -27,36 +27,38 @@ msgid ""
 "writing classes, it gives you a class decorator and a way to "
 "declaratively define the attributes on that class:"
 msgstr ""
+"为了实现重拾编写类的乐趣这一雄心勃勃的目标，它提供了类装饰器和声明式定义类属性的方法："
 
 #: ../../../README.md:3464
 msgid "After *declaring* your attributes, *attrs* gives you:"
-msgstr ""
+msgstr "在 *declaring* 你的属性后，*attrs* 给你："
 
 #: ../../../README.md:3466
 msgid "a concise and explicit overview of the class's attributes,"
-msgstr ""
+msgstr "简洁而显式的类属性概述，"
 
 #: ../../../README.md:3467
 msgid "a nice human-readable `__repr__`,"
-msgstr ""
+msgstr "良好的人类可读的 `__repr__`，"
 
 #: ../../../README.md:3468
 msgid "equality-checking methods,"
-msgstr ""
+msgstr "equality-checking 方法，"
 
 #: ../../../README.md:3469
 msgid "an initializer,"
-msgstr ""
+msgstr "初始化器"
 
 #: ../../../README.md:3470
 msgid "and much more,"
-msgstr ""
+msgstr "还有更多，"
 
 #: ../../../README.md:3472
 msgid ""
 "*without* writing dull boilerplate code again and again and *without* "
 "runtime performance penalties."
 msgstr ""
+"不用一遍又一遍地编写乏味的样板代码，也不会对运行时性能造成影响。"
 
 #: ../../../README.md:3474
 msgid ""
@@ -64,6 +66,7 @@ msgid ""
 "with *attrs*. Simply assign `attrs.field()` to the attributes instead of "
 "annotating them with types."
 msgstr ""
+"讨厌文字注释!?没问题!类型在 *attrs* 中是完全可选的。只需将 `attrs.field()` 分配给属性，而不是用类型注释它们。"
 
 #: ../../../README.md:3481
 msgid ""
@@ -73,6 +76,8 @@ msgid ""
 "serious-business aliases) and the `attr` package import name will remain "
 "**indefinitely**."
 msgstr ""
+"这个例子使用了 20.1.0 版本中引入的 *attrs* 现代 api，以及 21.3.0 版本中添加的 *attrs* 包导入名称。"
+"经典的 api (`@attr.s`，`attr.ib`，加上他们的 serious-business 别名）和 `attr` 包导入名称将无限期保留。"
 
 #: ../../../README.md:3484
 msgid ""
@@ -80,10 +85,11 @@ msgid ""
 "Names*](https://www.attrs.org/en/latest/names.html) for a more in-depth "
 "explanation."
 msgstr ""
+"请查看[*On The Core API Names*](https://www.attrs.org/en/latest/names.html)以获得更深入的解释。"
 
 #: ../../../README.md:3487
 msgid "Data Classes"
-msgstr ""
+msgstr "数据类"
 
 #: ../../../README.md:3489
 msgid ""
@@ -97,16 +103,21 @@ msgid ""
 "process](https://www.attrs.org/en/stable/init.html#hooking-yourself-into-"
 "initialization)."
 msgstr ""
+"总的来说，*attrs* 可能会让您想起 `dataclasses` （事实上，`dataclasses` 是 [*attrs* 的后代](https://hynek.me/articles/import-attrs/)）。"
+"在实践中，它做得更多，也更灵活。"
+"例如，它允许您为[相等性检查定义 NumPy 数组的特殊处理](https://www.attrs.org/en/stable/comparison.html#customization)，"
+"或者允许更多方法插入[初始化过程](https://www.attrs.org/en/stable/init.html#hooking-yourself-into-initialization)。"
 
 #: ../../../README.md:3493
 msgid ""
 "For more details, please refer to our [comparison "
 "page](https://www.attrs.org/en/stable/why.html#data-classes)."
 msgstr ""
+"更多详情请参考我们的[比较页面](https://www.attrs.org/en/stable/why.html#data-classes)。"
 
 #: ../../overview.md:11
 msgid "Philosophy"
-msgstr ""
+msgstr "哲学"
 
 #: ../../overview.md:13
 msgid "**It's about regular classes.**"
@@ -119,10 +130,12 @@ msgid ""
 "only containers like `namedtuple`s or `types.SimpleNamespace` but they're"
 " just a sub-genre of what *attrs* is good for."
 msgstr ""
+"*attrs* 用于创建具有类型、属性、方法以及类所附带的一切的行为良好的类。"
+"它可以用于只有数据的容器，如 `namedtuple` 或 `types.SimpleNamespace`，但它们只是 *attrs* 所擅长的子类型。"
 
 #: ../../overview.md:19
 msgid "**The class belongs to the users.**"
-msgstr ""
+msgstr "**类属于用户。**"
 
 #: ../../overview.md:21
 msgid ""
@@ -133,10 +146,13 @@ msgid ""
 "because it *is* a regular class with a few boilerplate-y methods "
 "attached."
 msgstr ""
+"定义类，*attrs* 根据您声明的属性向该类添加静态方法。"
+"最后。它不添加元类。它不会将您从未听说过的类添加到继承树中。"
+"运行时的 *attrs* 类与常规类没有区别：因为它是附加了一些样板方法的常规类。"
 
 #: ../../overview.md:28
 msgid "**Be light on API impact.**"
-msgstr ""
+msgstr "**对API影响要轻。**"
 
 #: ../../overview.md:30
 msgid ""
@@ -147,10 +163,13 @@ msgid ""
 "*attrs* instance as their first argument, you can attach them to your "
 "classes with one line of code."
 msgstr ""
+"虽然乍一看很方便，但 *attrs* 不会为你的类附加任何方法，除了那些 {term}`dunder 的方法 <dunder methods>`。"
+"因此，*attrs* 附带的所有有用 [tools](helpers) 都存在于在实例之上操作的函数中。"
+"由于它们将 *attrs* 实例作为第一个参数，您可以用一行代码将它们附加到类中。"
 
 #: ../../overview.md:35
 msgid "**Performance matters.**"
-msgstr ""
+msgstr "**影响性能的事项。**"
 
 #: ../../overview.md:37
 msgid ""
@@ -158,10 +177,11 @@ msgid ""
 " when the class is defined. Once you're instantiating it, *attrs* is out "
 "of the picture completely."
 msgstr ""
+"*attrs* 的运行时影响非常接近于零，因为所有的工作都是在定义类时完成的。一旦实例化了它，*attrs* 就完全消失了。"
 
 #: ../../overview.md:41
 msgid "**No surprises.**"
-msgstr ""
+msgstr "**怡然自得。**"
 
 #: ../../overview.md:43
 msgid ""
@@ -170,16 +190,19 @@ msgid ""
 "mean because explicit is better than implicit. It doesn't try to be "
 "clever because software shouldn't be clever."
 msgstr ""
+"*attrs* 创建的类可以按照 Python 初学者合理期望的方式工作。"
+"它不会试图猜测你的意思，因为显式比隐式好。它并不试图变得聪明，因为软件不应该变得聪明。"
 
 #: ../../overview.md:47
 msgid ""
 "Check out {doc}`how-does-it-work` if you'd like to know how it achieves "
 "all of the above."
 msgstr ""
+"看看{doc}`how-does-it-work`，如果你想知道它是如何实现以上所有目标的。"
 
 #: ../../overview.md:50
 msgid "What *attrs* Is Not"
-msgstr ""
+msgstr "什么是 *attrs* 没有做的"
 
 #: ../../overview.md:52
 msgid ""
@@ -187,10 +210,11 @@ msgid ""
 "out of its hat using meta classes, runtime introspection, and shaky "
 "interdependencies."
 msgstr ""
+"*attrs* 并没有发明某种神奇的系统，使用元类、运行时内省和不稳定的相互依赖性来实现类。"
 
 #: ../../overview.md:54
 msgid "All *attrs* does is:"
-msgstr ""
+msgstr "所有 *attrs* 做的是："
 
 #: ../../overview.md:56
 msgid "Take your declaration,"
@@ -209,4 +233,4 @@ msgid ""
 "It does *nothing* dynamic at runtime, hence zero runtime overhead. It's "
 "still *your* class. Do with it as you please."
 msgstr ""
-
+"它在运行时不做任何动态操作，因此运行时开销为零。这仍然是你的类。你想怎么处置就怎么处置。"

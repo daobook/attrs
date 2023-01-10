@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../how-does-it-work.md:3
 msgid "How Does It Work?"
-msgstr ""
+msgstr "它是如何工作的？"
 
 #: ../../how-does-it-work.md:5
 msgid "Boilerplate"
-msgstr ""
+msgstr "样板"
 
 #: ../../how-does-it-work.md:7
 msgid ""
@@ -31,6 +31,7 @@ msgid ""
 " Python. But its **declarative** approach combined with **no runtime "
 "overhead** lets it stand out."
 msgstr ""
+"*attrs* 并不是第一个旨在简化 Python 中类定义的库。但是它的 **declarative** 方法加上没有运行时开销使它脱颖而出。"
 
 #: ../../how-does-it-work.md:10
 msgid ""
@@ -40,6 +41,8 @@ msgid ""
 "counter to preserve the order of the attributes. Alternatively, it's "
 "possible to define them using {doc}`types`."
 msgstr ""
+"一旦将  `@attrs.define` (或 `@attr.s`)装饰器应用到类，*attrs* 就会在类对象中搜索 `attr.ib` 的实例。"
+"在内部，它们是传递给 `attr.ib` 的数据的表示并带有计数器来保存属性的顺序。或者，也可以使用 {doc}`types` 定义它们。"
 
 #: ../../how-does-it-work.md:14
 msgid ""
@@ -50,6 +53,8 @@ msgid ""
 "attributes which also has performance benefits due to fewer function "
 "calls."
 msgstr ""
+"为了确保子类化工作如您所期望的那样，*attrs* 还遍历类层次结构并收集所有基类的属性。"
+"请注意，*attrs* 永远不会调用 `super()`。它将编写 {term}`dunder methods` 来处理所有这些属性，这也有性能上的好处，因为函数调用更少。"
 
 #: ../../how-does-it-work.md:18
 msgid ""
@@ -61,6 +66,9 @@ msgid ""
 "elegant, we've run into several edge cases surrounding metaclasses that "
 "make it impossible to go this route unconditionally."
 msgstr ""
+"一旦 *attrs* 知道它必须处理哪些属性，它就会编写所请求的 {term}`dunder methods`，"
+"并为您创建新类(`slots=True`)或将它们附加到原始类 (`slots=False`)，这取决于您希望使用 {term}`dict <dict classes>` 还是 {term}`slotted <slotted classes>`。"
+"虽然创建新类更优雅，但我们遇到了一些围绕元类的边缘情况，这使得不可能无条件地走这条路。"
 
 #: ../../how-does-it-work.md:21
 msgid ""
@@ -68,10 +76,11 @@ msgid ""
 " default value, the generated `__init__` will look *exactly* how you'd "
 "expect:"
 msgstr ""
+"需要明确的是：如果你定义了只有一个属性而没有默认值的类，生成的 `__init__` 将与你所期望的完全一样："
 
 #: ../../how-does-it-work.md:35
 msgid "No magic, no meta programming, no expensive introspection at runtime."
-msgstr ""
+msgstr "没有魔法，没有元编程，没有运行时昂贵的自省。"
 
 #: ../../how-does-it-work.md:39
 msgid ""

@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../names.md:1
 msgid "On The Core API Names"
-msgstr ""
+msgstr "关于核心 API 名称"
 
 #: ../../names.md:3
 msgid ""
@@ -27,6 +27,7 @@ msgid ""
 "{func}`attrs.define` and with type annotated fields, instead of "
 "{func}`attr.s` and {func}`attr.ib()`."
 msgstr ""
+"你可能会惊讶地发现，*attrs* 类是使用 {func}`attrs.define` 和带类型注释的字段创建的，而不是 {func}`attr.s` 和 {func}`attr.ib()`。"
 
 #: ../../names.md:5
 msgid ""
@@ -34,12 +35,14 @@ msgid ""
 "`attr.ib` -- including people having strong opinions about it and using "
 "`attr.attrs` and `attr.attrib` instead."
 msgstr ""
+"或者，你想知道为什么网络和谈话都充满了这种奇怪的 `attr.s` 和 `attr.ib`——包括对它有强烈意见和使用 `attr.attrs`  和 `attr.attrib` 代替。"
 
 #: ../../names.md:7
 msgid ""
 "And what even is `attr.dataclass` that's not documented but commonly "
 "used!?"
 msgstr ""
+"并且 `attr.dataclass` 甚至没有被记录下来，但被普遍使用!?"
 
 #: ../../names.md:10
 msgid "TL;DR"
@@ -47,23 +50,23 @@ msgstr ""
 
 #: ../../names.md:12
 msgid "We recommend our modern APIs for new code:"
-msgstr ""
+msgstr "我们推荐我们的现代 api 的新代码："
 
 #: ../../names.md:16
 msgid "{func}`attrs.define` to define a new class,"
-msgstr ""
+msgstr "{func}`attrs.define` 定义新类，"
 
 #: ../../names.md:17
 msgid "[`attrs.mutable()`](attrs.mutable) is an alias for {func}`attrs.define`,"
-msgstr ""
+msgstr "[`attrs.mutable()`](attrs.mutable) 是 {func}`attrs.define` 的别名，"
 
 #: ../../names.md:18
 msgid "[`attrs.frozen()`](attrs.frozen) is an alias for `define(frozen=True)`"
-msgstr ""
+msgstr "[`attrs.frozen()`](attrs.frozen) 是 `define(frozen=True)` 的别名"
 
 #: ../../names.md:19
 msgid "and {func}`attrs.field()` to define an attribute."
-msgstr ""
+msgstr "并且 {func}`attrs.field()` 定义属性。"
 
 #: ../../names.md:21
 msgid ""
@@ -73,6 +76,8 @@ msgid ""
 "APIs. As of *attrs* 21.3.0 you can also import them from the `attrs` "
 "package namespace."
 msgstr ""
+"它们是在 *attrs* 20.1.0 中添加的，它们很有表现力，并且默认开启了插槽和类型注释感知等现代默认值。"
+"有时它们被称为 *next-generation* 或 *NG* API。从 *attrs* 21.3.0开始，您还可以从 `attrs` 包命名空间导入它们。"
 
 #: ../../names.md:25
 msgid ""
@@ -80,10 +85,11 @@ msgid ""
 "business aliases `attr.attrs` / `attr.attrib`, and the never-documented, "
 "but popular `attr.dataclass` easter egg will stay **forever**."
 msgstr ""
+"传统的 API {func}`attr.s` / {func}`attr.ib`，它们的严肃业务别名 `attr.attrs` / `attr.attrib`，以及从未记录在案但很流行的 `attr.dataclass` 彩蛋将永远存在。"
 
 #: ../../names.md:27
 msgid "*attrs* will **never** force you to use type annotations."
-msgstr ""
+msgstr "*attrs* 永远不会强迫你使用类型注释。"
 
 #: ../../names.md:30
 msgid "A Short History Lesson"

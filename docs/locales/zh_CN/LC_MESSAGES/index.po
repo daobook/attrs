@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../index.md:1
 msgid "*attrs*: Classes Without Boilerplate"
-msgstr ""
+msgstr "*attrs*: 无样板文件的类"
 
 #: ../../index.md:3
 msgid "Release **{sub-ref}`release`**  ([What's new?](changelog.md))"
@@ -37,16 +37,24 @@ msgid ""
 "mars-2020-helicopter-contributor-achievement) for Mars missions since "
 "2020!"
 msgstr ""
+"*attrs* 是 Python 包，它可以让你从实现对象协议（又名 [dunder 方法](https://www.attrs.org/en/latest/glossary.html#term-dunder-"
+"methods)）的苦差事中解脱出来，重新找回编写类的乐趣。"
+"[Trusted by NASA](https://docs.github.com/en/account-and-"
+"profile/setting-up-and-managing-your-github-profile/customizing-your-"
+"profile/personalizing-your-profile#list-of-qualifying-repositories-for-"
+"mars-2020-helicopter-contributor-achievement) for Mars missions since "
+"2020!"
 
 #: ../../../README.md:1408
 msgid ""
 "Its main goal is to help you to write **concise** and **correct** "
 "software without slowing down your code."
 msgstr ""
+"它的主要目标是帮助您在不降低代码速度的情况下编写 **简洁** 而 **正确** 的软件。"
 
 #: ../../../README.md:1411
 msgid "Sponsors"
-msgstr ""
+msgstr "赞助者"
 
 #: ../../../README.md:1413
 msgid ""
@@ -57,7 +65,7 @@ msgstr ""
 
 #: ../../index.md:11
 msgid "Getting Started"
-msgstr ""
+msgstr "入门指南"
 
 #: ../../index.md:13
 msgid ""
@@ -66,10 +74,12 @@ msgid ""
 "method is [pip](https://pip.pypa.io/en/stable/)-installing into a "
 "[virtualenv](https://hynek.me/articles/virtualenv-lives/):"
 msgstr ""
+"*attrs* 是[托管在 PyPI 上](https://pypi.org/project/attrs/)的 python 专用包。"
+"推荐的安装方法是 [pip](https://pip.pypa.io/en/stable/) - 安装到 [virtualenv](https://hynek.me/articles/virtualenv-lives/):"
 
 #: ../../index.md:20
 msgid "The next steps will get you up and running in no time:"
-msgstr ""
+msgstr "接下来的步骤将会让你在任何时间内启动和运行："
 
 #: ../../index.md:22
 msgid ""
@@ -77,6 +87,8 @@ msgid ""
 "introduce you to its philosophy. Afterwards, you can start writing your "
 "own classes and understand what drives *attrs*'s design."
 msgstr ""
+"{doc}`overview` 将向展示 *attrs* 的简单示例，并向你介绍它的哲学。"
+"之后，你可以开始编写自己的类，并理解是什么驱动了 *attrs* 的设计。"
 
 #: ../../index.md:24
 msgid ""
@@ -84,18 +96,21 @@ msgid ""
 " After reading, you will know about our advanced features and how to use "
 "them."
 msgstr ""
+"{doc}`examples` 将让您全面了解 *attrs* 的功能。阅读后，您将了解高级功能以及如何使用它们。"
 
 #: ../../index.md:26
 msgid ""
 "{doc}`why` gives you a rundown of potential alternatives and why we think"
 " *attrs* is still worthwhile -- depending on *your* needs even superior."
 msgstr ""
+"{doc}`why` 给你潜在的替代方案的纲要，以及为什么我们认为 *attrs* 仍然是值得的-取决于你的需要甚至更高。"
 
 #: ../../index.md:27
 msgid ""
 "If at any point you get confused by some terminology, please check out "
 "our {doc}`glossary`."
 msgstr ""
+"如果在任何时候你对一些术语感到困惑，请查看 {doc}`glossary`。"
 
 #: ../../index.md:29
 msgid ""
@@ -103,10 +118,12 @@ msgid ""
 "attrs` tag on [Stack Overflow](https://stackoverflow.com/questions/tagged"
 "/python-attrs) and someone will surely help you out!"
 msgstr ""
+"如果你在开始时需要任何帮助，请随意使用 [Stack Overflow](https://stackoverflow.com/questions/tagged"
+"/python-attrs) 上的 `python-attrs` 标签，一定会有人帮助你！"
 
 #: ../../index.md:32
 msgid "Day-to-Day Usage"
-msgstr ""
+msgstr "日常的使用"
 
 #: ../../index.md:34
 msgid ""
@@ -114,6 +131,8 @@ msgid ""
 "*attrs* has first class support for them, yet keeps them optional if "
 "you’re not convinced!"
 msgstr ""
+"{doc}`types` 帮助您编写 *正确* 和 *self-documenting* 的代码。"
+"*attrs* 为它们提供了一流的支持，但如果你不相信，它们仍然是可选的！"
 
 #: ../../index.md:36
 msgid ""
@@ -122,12 +141,16 @@ msgid ""
 "you an overview what *attrs* has to offer and explains some related "
 "philosophies we believe in."
 msgstr ""
+"实例初始化是 *attrs* 的关键特性之一。"
+"我们的目标是将您从编写尽可能多的代码中解放出来。"
+"{doc}`init` 可以让你大致了解 *attrs* 提供了什么，并解释了我们所信奉的一些相关哲学。"
 
 #: ../../index.md:39
 msgid ""
 "Comparing and ordering objects is a common task. {doc}`comparison` shows "
 "you how *attrs* helps you with that and how you can customize it."
 msgstr ""
+"比较和排序对象常见的任务。{doc}`comparison` 显示了 *attrs* 如何帮助您，以及如何自定义它。"
 
 #: ../../index.md:41
 msgid ""
@@ -136,12 +159,15 @@ msgid ""
 "classes, but the topic is more complex than it seems and {doc}`hashing` "
 "will give you a primer on what to look out for."
 msgstr ""
+"如果你想把对象放到集合中或者在字典中使用它们作为键，它们必须是可哈希的。"
+"做到这一点最简单的方法是使用冻结类，但是这个主题比看起来要复杂得多，{doc}`hashing` 将为您提供一个注意什么的入门知识。"
 
 #: ../../index.md:43
 msgid ""
 "Once you're comfortable with the concepts, our {doc}`api` contains all "
 "information you need to use *attrs* to its fullest."
 msgstr ""
+"一旦您熟悉了这些概念，我们的 {doc}`api` 包含了充分使用 *attrs* 所需的所有信息。"
 
 #: ../../index.md:44
 msgid ""
@@ -149,6 +175,7 @@ msgid ""
 "show you the affordances it offers and how to make it a building block of"
 " your own projects."
 msgstr ""
+"*attrs* 是为从头开始的扩展而构建的。{doc}`extending` 将向您展示它提供的功能支持，以及如何使其成为您自己项目的构建块。"
 
 #: ../../index.md:46
 msgid ""
@@ -156,10 +183,12 @@ msgid ""
 "`attrib`, `define`, `frozen`, and `field`, head over to {doc}`names` for "
 "a very short explanation, and optionally a quick history lesson."
 msgstr ""
+"最后，如果你对所有的 `attr.s`，, `attr.ib`, `attrs`, `attrib`, `define`, `frozen` 和 `field` 感到困惑，"
+"请转到 {doc}`names` 的简短解释，并可选快速历史课程。"
 
 #: ../../index.md:49
 msgid "Project Information"
-msgstr ""
+msgstr "项目信息"
 
 #: ../../../README.md:5718
 msgid "[**Changelog**](https://www.attrs.org/en/stable/changelog.html)"

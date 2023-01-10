@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015, Hynek Schlawack
 # This file is distributed under the same license as the attrs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# xinetzone <xinzone@outlook.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../comparison.md:1
 msgid "Comparison"
-msgstr ""
+msgstr "比较"
 
 #: ../../comparison.md:3
 msgid ""
@@ -27,6 +27,8 @@ msgid ""
 "fields are equal. For that, *attrs* writes `__eq__` and `__ne__` methods "
 "for you."
 msgstr ""
+"默认情况下，如果 *attrs* 类的所有字段都相等，则它们的两个实例是相等的。"
+"为此，*attrs* 为你编写 `__eq__` 和 `__ne__` 方法。"
 
 #: ../../comparison.md:6
 msgid ""
@@ -34,16 +36,18 @@ msgid ""
 "create a full set of ordering methods that are based on the defined "
 "fields: `__le__`, `__lt__`, `__ge__`, and `__gt__`."
 msgstr ""
+#  "此外，如果传递 `order=True` [^default] ， *attrs* 还将创建一套完整的基于已定义字段的排序方法：`__le__`， `__lt__`， `__ge__` 和 `__gt__`。"
 
 #: ../../comparison.md:12
 msgid "Customization"
-msgstr ""
+msgstr "自定义"
 
 #: ../../comparison.md:14
 msgid ""
 "As with other features, you can exclude fields from being involved in "
 "comparison operations:"
 msgstr ""
+"和其他特性一样，你可以在比较操作中排除 fields："
 
 #: ../../comparison.md:27
 msgid ""
@@ -51,6 +55,7 @@ msgid ""
 "*eq* and *order*. It is then used as a key function like you may know "
 "from {func}`sorted`:"
 msgstr ""
+"此外，你还可以向 *eq* 和 *order* 传递可调用对象而不是 bool 类型。然后它被用作 key 函数，就像你可能知道的 {func}`sorted`："
 
 #: ../../comparison.md:46
 msgid ""
@@ -58,6 +63,7 @@ msgid ""
 "atypical comparison properties. Common examples of such objects are "
 "[*NumPy* arrays](https://github.com/python-attrs/attrs/issues/435)."
 msgstr ""
+"这在具有具有非典型比较属性的对象的字段时特别有用。这种对象的常见示例是 [NumPy 数组](https://github.com/python-attrs/attrs/issues/435)。"
 
 #: ../../comparison.md:49
 msgid ""
@@ -65,6 +71,7 @@ msgid ""
 "{func}`attrs.cmp_using` helper to create such functions. For *NumPy* "
 "arrays it would look like this:"
 msgstr ""
+"为了节省不必要的样板文件， *attrs* 附带了 {func}`attrs.cmp_using` 辅助来创建这样的函数。对于 NumPy 数组，它看起来像这样："
 
 #: ../../comparison.md:61
 msgid ""
@@ -73,10 +80,12 @@ msgid ""
 "{func}`attr.s`). You can set both at once by using the *cmp* argument "
 "that we've undeprecated just for this use-case."
 msgstr ""
+"请注意 *eq* 和 *order* 是独立设置的，因为 *order* 在 {func}`~attrs.define` 中默认为 `False`(但在 {func}`attr.s` 中不是)。"
+"您可以通过使用 *cmp* 参数同时设置这两个参数，我们仅在此用例中不反对使用该参数。"
 
 #: ../../comparison.md:8
 msgid ""
 "That's the default if you use the {func}`attr.s` decorator, but not with "
 "{func}`~attrs.define`."
 msgstr ""
-
+"如果使用 {func}`attr.s` 装饰器，而不是使用 {func}`~attrs.define`，这是默认值。"
