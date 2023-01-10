@@ -1,0 +1,434 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Hynek Schlawack
+# This file is distributed under the same license as the attrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: attrs 22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 12:37+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../examples.md:1
+msgid "*attrs* by Example"
+msgstr ""
+
+#: ../../examples.md:3
+msgid "Basics"
+msgstr ""
+
+#: ../../examples.md:5
+msgid "The simplest possible usage is:"
+msgstr ""
+
+#: ../../examples.md:20
+msgid "So in other words: *attrs* is useful even without actual attributes!"
+msgstr ""
+
+#: ../../examples.md:22
+msgid "But you'll usually want some data on your classes, so let's add some:"
+msgstr ""
+
+#: ../../examples.md:31
+msgid ""
+"By default, all features are added, so you immediately have a fully "
+"functional data class with a nice `repr` string and comparison methods."
+msgstr ""
+
+#: ../../examples.md:44
+msgid ""
+"As shown, the generated `__init__` method allows for both positional and "
+"keyword arguments."
+msgstr ""
+
+#: ../../examples.md:46
+msgid ""
+"For private attributes, *attrs* will strip the leading underscores for "
+"keyword arguments:"
+msgstr ""
+
+#: ../../examples.md:56
+msgid ""
+"If you want to initialize your private attributes yourself, you can do "
+"that too:"
+msgstr ""
+
+#: ../../examples.md:70
+msgid ""
+"If you prefer to expose your privates, you can use keyword argument "
+"aliases:"
+msgstr ""
+
+#: ../../examples.md:80
+msgid ""
+"An additional way of defining attributes is supported too. This is useful"
+" in times when you want to enhance classes that are not yours (nice "
+"`__repr__` for Django models anyone?):"
+msgstr ""
+
+#: ../../examples.md:95
+msgid ""
+"[Subclassing is bad for "
+"you](https://www.youtube.com/watch?v=3MNVP9-hglc), but *attrs* will still"
+" do what you'd hope for:"
+msgstr ""
+
+#: ../../examples.md:118
+msgid ""
+"{term}`Slotted classes <slotted classes>`, which are the default for the "
+"new APIs, don't play well with multiple inheritance so we don't use them "
+"in the example."
+msgstr ""
+
+#: ../../examples.md:120
+msgid ""
+"The order of the attributes is defined by the "
+"[MRO](https://www.python.org/download/releases/2.3/mro/)."
+msgstr ""
+
+#: ../../examples.md:123
+msgid "Keyword-only Attributes"
+msgstr ""
+
+#: ../../examples.md:125
+msgid ""
+"You can also add [keyword-only](https://docs.python.org/3/glossary.html"
+"#keyword-only-parameter) attributes:"
+msgstr ""
+
+#: ../../examples.md:139
+msgid ""
+"`kw_only` may also be specified at decorator level, and will apply to all"
+" attributes:"
+msgstr ""
+
+#: ../../examples.md:154
+msgid ""
+"If you create an attribute with `init=False`, the `kw_only` argument is "
+"ignored."
+msgstr ""
+
+#: ../../examples.md:156
+msgid ""
+"Keyword-only attributes allow subclasses to add attributes without "
+"default values, even if the base class defines attributes with default "
+"values:"
+msgstr ""
+
+#: ../../examples.md:173
+msgid ""
+"If you don't set `kw_only=True`, then there is no valid attribute "
+"ordering, and you'll get an error:"
+msgstr ""
+
+#: ../../examples.md:189
+msgid "Converting to Collections Types"
+msgstr ""
+
+#: ../../examples.md:191
+msgid ""
+"When you have a class with data, it often is very convenient to transform"
+" that class into a {class}`dict` (for example if you want to serialize it"
+" to JSON):"
+msgstr ""
+
+#: ../../examples.md:199
+msgid ""
+"Some fields cannot or should not be transformed. For that, "
+"{func}`attrs.asdict` offers a callback that decides whether an attribute "
+"should be included:"
+msgstr ""
+
+#: ../../examples.md:218
+msgid ""
+"For the common case where you want to [`include`](attrs.filters.include) "
+"or [`exclude`](attrs.filters.exclude) certain types or attributes, "
+"*attrs* ships with a few helpers:"
+msgstr ""
+
+#: ../../examples.md:245
+msgid "Other times, all you want is a tuple and *attrs* won't let you down:"
+msgstr ""
+
+#: ../../examples.md:268
+msgid ""
+"For more advanced transformations and conversions, we recommend you look "
+"at a companion library (such as [*cattrs*](https://catt.rs/))."
+msgstr ""
+
+#: ../../examples.md:271
+msgid "Defaults"
+msgstr ""
+
+#: ../../examples.md:273
+msgid ""
+"Sometimes you want to have default values for your initializer. And "
+"sometimes you even want mutable objects as default values (ever "
+"accidentally used `def f(arg=[])`?). *attrs* has you covered in both "
+"cases:"
+msgstr ""
+
+#: ../../examples.md:316
+msgid ""
+"More information on why class methods for constructing objects are "
+"awesome can be found in this insightful [blog "
+"post](https://web.archive.org/web/20210130220433/http://as.ynchrono.us/2014/12"
+"/asynchronous-object-initialization.html)."
+msgstr ""
+
+#: ../../examples.md:318
+msgid ""
+"Default factories can also be set using the `factory` argument to "
+"{func}`~attrs.field`, and using a decorator. The method receives the "
+"partially initialized instance which enables you to base a default value "
+"on other attributes:"
+msgstr ""
+
+#: ../../examples.md:334
+msgid ""
+"Please keep in mind that the decorator approach *only* works if the "
+"attribute in question has a {func}`~attrs.field` assigned to it. As a "
+"result, annotating an attribute with a type is *not* enough if you use "
+"`@default`."
+msgstr ""
+
+#: ../../examples.md:339
+msgid "Validators"
+msgstr ""
+
+#: ../../examples.md:341
+msgid ""
+"Although your initializers should do as little as possible (ideally: just"
+" initialize your instance according to the arguments!), it can come in "
+"handy to do some kind of validation on the arguments."
+msgstr ""
+
+#: ../../examples.md:343
+msgid ""
+"*attrs* offers two ways to define validators for each attribute and it's "
+"up to you to choose which one suits your style and project better."
+msgstr ""
+
+#: ../../examples.md:345
+msgid "You can use a decorator:"
+msgstr ""
+
+#: ../../examples.md:363
+msgid "...or a callable..."
+msgstr ""
+
+#: ../../examples.md:384
+msgid "...or both at once:"
+msgstr ""
+
+#: ../../examples.md:406
+msgid ""
+"Please note that the decorator approach only works if -- and only if! -- "
+"the attribute in question has a {func}`~attrs.field` assigned. Therefore "
+"if you use `@validator`, it is *not* enough to annotate said attribute "
+"with a type."
+msgstr ""
+
+#: ../../examples.md:409
+msgid ""
+"*attrs* ships with a bunch of validators, make sure to [check them out"
+"](api-validators) before writing your own:"
+msgstr ""
+
+#: ../../examples.md:423
+msgid ""
+"Please note that if you use {func}`attr.s` (and **not** "
+"{func}`attrs.define`) to define your class, validators only run on "
+"initialization by default -- not when you set an attribute. This behavior"
+" can be changed using the `on_setattr` argument."
+msgstr ""
+
+#: ../../examples.md:426
+msgid "Check out {ref}`validators` for more details."
+msgstr ""
+
+#: ../../examples.md:429
+msgid "Conversion"
+msgstr ""
+
+#: ../../examples.md:431
+msgid ""
+"Attributes can have a `converter` function specified, which will be "
+"called with the attribute's passed-in value to get a new value to use. "
+"This can be useful for doing type-conversions on values that you don't "
+"want to force your callers to do."
+msgstr ""
+
+#: ../../examples.md:443
+msgid "Please note that converters only run on initialization."
+msgstr ""
+
+#: ../../examples.md:445
+msgid "Check out {ref}`converters` for more details."
+msgstr ""
+
+#: ../../examples.md:449
+msgid "Metadata"
+msgstr ""
+
+#: ../../examples.md:451
+msgid ""
+"All *attrs* attributes may include arbitrary metadata in the form of a "
+"read-only dictionary."
+msgstr ""
+
+#: ../../examples.md:465
+msgid ""
+"Metadata is not used by *attrs*, and is meant to enable rich "
+"functionality in third-party libraries. The metadata dictionary follows "
+"the normal dictionary rules: Keys need to be hashable, and both keys and "
+"values are recommended to be immutable."
+msgstr ""
+
+#: ../../examples.md:469
+msgid ""
+"If you're the author of a third-party library with *attrs* integration, "
+"please see [*Extending Metadata*](extending-metadata)."
+msgstr ""
+
+#: ../../examples.md:472
+msgid "Types"
+msgstr ""
+
+#: ../../examples.md:474
+msgid ""
+"*attrs* also allows you to associate a type with an attribute using "
+"either the *type* argument to {func}`attr.ib` or using "
+"{pep}`526`-annotations:"
+msgstr ""
+
+#: ../../examples.md:491
+msgid ""
+"If you don't mind annotating *all* attributes, you can even drop the "
+"`attrs.field` and assign default values instead:"
+msgstr ""
+
+#: ../../examples.md:517
+msgid ""
+"The generated `__init__` method will have an attribute called "
+"`__annotations__` that contains this type information."
+msgstr ""
+
+#: ../../examples.md:519
+msgid ""
+"If your annotations contain strings (e.g. forward references), you can "
+"resolve these after all references have been defined by using "
+"{func}`attrs.resolve_types`. This will replace the *type* attribute in "
+"the respective fields."
+msgstr ""
+
+#: ../../examples.md:548
+msgid ""
+"If you find yourself using string type annotations to handle forward "
+"references, wrap the entire type annotation in quotes instead of only the"
+" type you need a forward reference to (so `'list[A]'` instead of "
+"`list['A']`). This is a limitation of the Python typing system."
+msgstr ""
+
+#: ../../examples.md:553
+msgid ""
+"*attrs* itself doesn't have any features that work on top of type "
+"metadata. However it's useful for writing your own validators or "
+"serialization frameworks."
+msgstr ""
+
+#: ../../examples.md:558
+msgid "Slots"
+msgstr ""
+
+#: ../../examples.md:560
+msgid ""
+"{term}`Slotted classes <slotted classes>` have several advantages on "
+"CPython. Defining `__slots__` by hand is tedious, in *attrs* it's just a "
+"matter of using {func}`attrs.define` or passing `slots=True` to "
+"{func}`attr.s`:"
+msgstr ""
+
+#: ../../examples.md:572
+msgid "{func}`~attrs.define` sets `slots=True` by default."
+msgstr ""
+
+#: ../../examples.md:575
+msgid "Immutability"
+msgstr ""
+
+#: ../../examples.md:577
+msgid ""
+"Sometimes you have instances that shouldn't be changed after "
+"instantiation. Immutability is especially popular in functional "
+"programming and is generally a very good thing. If you'd like to enforce "
+"it, *attrs* will try to help:"
+msgstr ""
+
+#: ../../examples.md:596
+msgid ""
+"Please note that true immutability is impossible in Python but it will "
+"[get](how-frozen) you 99% there. By themselves, immutable classes are "
+"useful for long-lived objects that should never change; like "
+"configurations for example."
+msgstr ""
+
+#: ../../examples.md:599
+msgid ""
+"In order to use them in regular program flow, you'll need a way to easily"
+" create new instances with changed attributes. In Clojure that function "
+"is called [assoc](https://clojuredocs.org/clojure.core/assoc) and *attrs*"
+" shamelessly imitates it: `attr.evolve`:"
+msgstr ""
+
+#: ../../examples.md:620
+msgid "Other Goodies"
+msgstr ""
+
+#: ../../examples.md:622
+msgid ""
+"Sometimes you may want to create a class programmatically. *attrs* gives "
+"you {func}`attrs.make_class` for that:"
+msgstr ""
+
+#: ../../examples.md:636
+msgid ""
+"You can still have power over the attributes if you pass a dictionary of "
+"name: {func}`~attrs.field` mappings and can pass arguments to `@attr.s`:"
+msgstr ""
+
+#: ../../examples.md:651
+msgid ""
+"If you need to dynamically make a class with {func}`~attrs.make_class` "
+"and it needs to be a subclass of something else than {class}`object`, use"
+" the `bases` argument:"
+msgstr ""
+
+#: ../../examples.md:662
+msgid ""
+"Sometimes, you want to have your class's `__init__` method do more than "
+"just the initialization, validation, etc. that gets done for you "
+"automatically when using `@define`. To do this, just define a "
+"`__attrs_post_init__` method in your class. It will get called at the end"
+" of the generated `__init__` method."
+msgstr ""
+
+#: ../../examples.md:682
+msgid "You can exclude single attributes from certain methods:"
+msgstr ""
+
+#: ../../examples.md:693
+msgid ""
+"Alternatively, to influence how the generated `__repr__()` method formats"
+" a specific attribute, specify a custom callable to be used instead of "
+"the `repr()` built-in function:"
+msgstr ""
+

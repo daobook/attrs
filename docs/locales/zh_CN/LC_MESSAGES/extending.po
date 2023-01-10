@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Hynek Schlawack
+# This file is distributed under the same license as the attrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: attrs 22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 12:37+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../extending.md:1
+msgid "Extending"
+msgstr ""
+
+#: ../../extending.md:3
+msgid ""
+"Each *attrs*-decorated class has a `__attrs_attrs__` class attribute. "
+"It's a tuple of {class}`attrs.Attribute` carrying metadata about each "
+"attribute."
+msgstr ""
+
+#: ../../extending.md:6
+msgid "So it is fairly simple to build your own decorators on top of *attrs*:"
+msgstr ""
+
+#: ../../extending.md:21
+msgid ""
+"The {func}`attrs.define` / {func}`attr.s` decorator **must** be applied "
+"first because it puts `__attrs_attrs__` in place! That means that is has "
+"to come *after* your decorator because:"
+msgstr ""
+
+#: ../../extending.md:31
+msgid ""
+"is just [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) "
+"for:"
+msgstr ""
+
+#: ../../extending.md:42
+msgid "Wrapping the Decorator"
+msgstr ""
+
+#: ../../extending.md:44
+msgid ""
+"A more elegant way can be to wrap *attrs* altogether and build a class "
+"[DSL](https://en.wikipedia.org/wiki/Domain-specific_language) on top of "
+"it."
+msgstr ""
+
+#: ../../extending.md:46
+msgid ""
+"An example for that is the package [*environ-"
+"config*](https://github.com/hynek/environ-config) that uses *attrs* under"
+" the hood to define environment-based configurations declaratively "
+"without exposing *attrs* APIs at all."
+msgstr ""
+
+#: ../../extending.md:48
+msgid "Another common use case is to overwrite *attrs*'s defaults."
+msgstr ""
+
+#: ../../extending.md:51
+msgid "Mypy"
+msgstr ""
+
+#: ../../extending.md:53
+msgid ""
+"Unfortunately, decorator wrapping currently "
+"[confuses](https://github.com/python/mypy/issues/5406) mypy's *attrs* "
+"plugin. At the moment, the best workaround is to hold your nose, write a "
+"fake *Mypy* plugin, and mutate a bunch of global variables:"
+msgstr ""
+
+#: ../../extending.md:82
+msgid "Then tell *Mypy* about your plugin using your project's `mypy.ini`:"
+msgstr ""
+
+#: ../../extending.md:90
+msgid ""
+"Please note that it is currently *impossible* to let mypy know that "
+"you've changed defaults like *eq* or *order*. You can only use this trick"
+" to tell *Mypy* that a class is actually an *attrs* class."
+msgstr ""
+
+#: ../../extending.md:95
+msgid "Pyright"
+msgstr ""
+
+#: ../../extending.md:97
+msgid ""
+"Generic decorator wrapping is supported in "
+"[*Pyright*](https://github.com/microsoft/pyright) via their "
+"[`dataclass_transform`] specification."
+msgstr ""
+
+#: ../../extending.md:99
+msgid "For a custom wrapping of the form:"
+msgstr ""
+
+#: ../../extending.md:106
+msgid ""
+"This is implemented via a `__dataclass_transform__` type decorator in the"
+" custom extension's `.pyi` of the form:"
+msgstr ""
+
+#: ../../extending.md:122
+msgid ""
+"`dataclass_transform` is supported **provisionally** as of `pyright` "
+"1.1.135."
+msgstr ""
+
+#: ../../extending.md:124
+msgid ""
+"Both the *Pyright* [`dataclass_transform`] specification and *attrs* "
+"implementation may change in future versions."
+msgstr ""
+
+#: ../../extending.md:127
+msgid "Types"
+msgstr ""
+
+#: ../../extending.md:129
+msgid "*attrs* offers two ways of attaching type information to attributes:"
+msgstr ""
+
+#: ../../extending.md:131
+msgid "{pep}`526` annotations,"
+msgstr ""
+
+#: ../../extending.md:132
+msgid "and the *type* argument to {func}`attr.ib`."
+msgstr ""
+
+#: ../../extending.md:134
+msgid "This information is available to you:"
+msgstr ""
+
+#: ../../extending.md:148
+msgid ""
+"Currently, *attrs* doesn't do anything with this information but it's "
+"very useful if you'd like to write your own validators or serializers!"
+msgstr ""
+
+#: ../../extending.md:152
+msgid "Metadata"
+msgstr ""
+
+#: ../../extending.md:154
+msgid ""
+"If you're the author of a third-party library with *attrs* integration, "
+"you may want to take advantage of attribute metadata."
+msgstr ""
+
+#: ../../extending.md:156
+msgid "Here are some tips for effective use of metadata:"
+msgstr ""
+
+#: ../../extending.md:158
+msgid ""
+"Try making your metadata keys and values immutable. This keeps the entire"
+" {class}`~attrs.Attribute` instances immutable too."
+msgstr ""
+
+#: ../../extending.md:161
+msgid ""
+"To avoid metadata key collisions, consider exposing your metadata keys "
+"from your modules.:"
+msgstr ""
+
+#: ../../extending.md:171
+msgid ""
+"Metadata should be composable, so consider supporting this approach even "
+"if you decide implementing your metadata in one of the following ways."
+msgstr ""
+
+#: ../../extending.md:173
+msgid ""
+"Expose `field` wrappers for your specific metadata. This is a more "
+"graceful approach if your users don't require metadata from other "
+"libraries."
+msgstr ""
+
+#: ../../extending.md:202
+msgid "Automatic Field Transformation and Modification"
+msgstr ""
+
+#: ../../extending.md:204
+msgid ""
+"*attrs* allows you to automatically modify or transform the class' fields"
+" while the class is being created. You do this by passing a "
+"*field_transformer* hook to {func}`~attrs.define` (and friends). Its main"
+" purpose is to automatically add converters to attributes based on their "
+"type to aid the development of API clients and other typed data loaders."
+msgstr ""
+
+#: ../../extending.md:208
+msgid "This hook must have the following signature:"
+msgstr ""
+
+#: ../../extending.md:215
+msgid ""
+"*cls* is your class right *before* it is being converted into an attrs "
+"class. This means it does not yet have the `__attrs_attrs__` attribute."
+msgstr ""
+
+#: ../../extending.md:217
+msgid ""
+"*fields* is a list of all `attrs.Attribute` instances that will later be "
+"set to `__attrs_attrs__`. You can modify these attributes any way you "
+"want: You can add converters, change types, and even remove attributes "
+"completely or create new ones!"
+msgstr ""
+
+#: ../../extending.md:221
+msgid "For example, let's assume that you really don't like floats:"
+msgstr ""
+
+#: ../../extending.md:237
+msgid ""
+"A more realistic example would be to automatically convert data that you,"
+" e.g., load from JSON:"
+msgstr ""
+
+#: ../../extending.md:266
+msgid ""
+"Or, perhaps you would prefer to generate dataclass-compatible `__init__` "
+"signatures via a default field *alias*. Note, *field_transformer* "
+"operates on {class}`attrs.Attribute` instances before the default "
+"private-attribute handling is applied so explicit user-provided aliases "
+"can be detected."
+msgstr ""
+
+#: ../../extending.md:288
+msgid "Customize Value Serialization in `asdict()`"
+msgstr ""
+
+#: ../../extending.md:290
+msgid ""
+"*attrs* allows you to serialize instances of *attrs* classes to dicts "
+"using the {func}`attrs.asdict` function. However, the result can not "
+"always be serialized since most data types will remain as they are:"
+msgstr ""
+
+#: ../../extending.md:311
+msgid ""
+"To help you with this, {func}`~attrs.asdict` allows you to pass a "
+"*value_serializer* hook. It has the signature"
+msgstr ""
+

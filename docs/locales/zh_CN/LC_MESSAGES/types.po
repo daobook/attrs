@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Hynek Schlawack
+# This file is distributed under the same license as the attrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: attrs 22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 12:37+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../types.md:1
+msgid "Type Annotations"
+msgstr ""
+
+#: ../../types.md:3
+msgid ""
+"*attrs* comes with first class support for type annotations for both "
+"Python 3.6 ({pep}`526`) and legacy syntax."
+msgstr ""
+
+#: ../../types.md:5
+msgid ""
+"However they will forever remain *optional*, therefore the example from "
+"the README could also be written as:"
+msgstr ""
+
+#: ../../types.md:20
+msgid ""
+"You can choose freely between the approaches, but please remember that if"
+" you choose to use type annotations, you **must** annotate **all** "
+"attributes!"
+msgstr ""
+
+#: ../../types.md:24
+msgid ""
+"Even when going all-in on type annotations, you will need "
+"{func}`attrs.field` for some advanced features though."
+msgstr ""
+
+#: ../../types.md:26
+msgid ""
+"One of those features are the decorator-based features like defaults. "
+"It's important to remember that *attrs* doesn't do any magic behind your "
+"back. All the decorators are implemented using an object that is returned"
+" by the call to {func}`attrs.field`."
+msgstr ""
+
+#: ../../types.md:30
+msgid ""
+"Attributes that only carry a class annotation do not have that object so "
+"trying to call a method on it will inevitably fail."
+msgstr ""
+
+#: ../../types.md:34
+msgid ""
+"Please note that types -- regardless how added -- are *only metadata* "
+"that can be queried from the class and they aren't used for anything out "
+"of the box!"
+msgstr ""
+
+#: ../../types.md:36
+msgid ""
+"Because Python does not allow references to a class object before the "
+"class is defined, types may be defined as string literals, so-called "
+"*forward references* ({pep}`526`). You can enable this automatically for "
+"a whole module by using `from __future__ import annotations` ({pep}`563`)"
+" as of Python 3.7. In this case *attrs* simply puts these string literals"
+" into the `type` attributes. If you need to resolve these to real types, "
+"you can call {func}`attrs.resolve_types` which will update the attribute "
+"in place."
+msgstr ""
+
+#: ../../types.md:42
+msgid ""
+"In practice though, types show their biggest usefulness in combination "
+"with tools like [*Mypy*], [*pytype*], or [*Pyright*] that have dedicated "
+"support for *attrs* classes."
+msgstr ""
+
+#: ../../types.md:44
+msgid ""
+"The addition of static types is certainly one of the most exciting "
+"features in the Python ecosystem and helps you write *correct* and "
+"*verified self-documenting* code."
+msgstr ""
+
+#: ../../types.md:46
+msgid ""
+"If you don't know where to start, Carl Meyer gave a great talk on [*Type-"
+"checked Python in the Real "
+"World*](https://www.youtube.com/watch?v=pMgmKJyWKn8) at PyCon US 2018 "
+"that will help you to get started in no time."
+msgstr ""
+
+#: ../../types.md:49
+msgid "Mypy"
+msgstr ""
+
+#: ../../types.md:51
+msgid ""
+"While having a nice syntax for type metadata is great, it's even greater "
+"that [*Mypy*] as of 0.570 ships with a dedicated *attrs* plugin which "
+"allows you to statically check your code."
+msgstr ""
+
+#: ../../types.md:53
+msgid ""
+"Imagine you add another line that tries to instantiate the defined class "
+"using `SomeClass(\"23\")`. Mypy will catch that error for you:"
+msgstr ""
+
+#: ../../types.md:61
+msgid "This happens *without* running your code!"
+msgstr ""
+
+#: ../../types.md:63
+msgid ""
+"And it also works with *both* Python 2-style annotation styles. To "
+"*Mypy*, this code is equivalent to the one above:"
+msgstr ""
+
+#: ../../types.md:74
+msgid "Pyright"
+msgstr ""
+
+#: ../../types.md:76
+msgid ""
+"*attrs* provides support for [*Pyright*] though the "
+"[`dataclass_transform`] specification. This provides static type "
+"inference for a subset of *attrs* equivalent to standard-library "
+"{mod}`dataclasses`, and requires explicit type annotations using the "
+"{func}`attrs.define` or `@attr.s(auto_attribs=True)` API."
+msgstr ""
+
+#: ../../types.md:80
+msgid ""
+"Given the following definition, *Pyright* will generate static type "
+"signatures for `SomeClass` attribute access, `__init__`, `__eq__`, and "
+"comparison methods:"
+msgstr ""
+
+#: ../../types.md:90
+msgid ""
+"The *Pyright* inferred types are a tiny subset of those supported by "
+"*Mypy*, including:"
+msgstr ""
+
+#: ../../types.md:92
+msgid ""
+"The generated `__init__` signature only includes the attribute type "
+"annotations. It currently does not include attribute `converter` types."
+msgstr ""
+
+#: ../../types.md:95
+msgid ""
+"The `attrs.frozen` decorator is not typed with frozen attributes, which "
+"are properly typed via `attrs.define(frozen=True)`."
+msgstr ""
+
+#: ../../types.md:97
+msgid ""
+"A [full "
+"list](https://github.com/microsoft/pyright/blob/main/specs/dataclass_transforms.md#attrs)"
+" of limitations and incompatibilities can be found in *Pyright*'s "
+"repository."
+msgstr ""
+
+#: ../../types.md:99
+msgid ""
+"Your constructive feedback is welcome in both "
+"[attrs#795](https://github.com/python-attrs/attrs/issues/795) and "
+"[pyright#1782](https://github.com/microsoft/pyright/discussions/1782). "
+"Generally speaking, the decision on improving *attrs* support in "
+"*Pyright* is entirely Microsoft's prerogative, though."
+msgstr ""
+

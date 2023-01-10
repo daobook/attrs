@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Hynek Schlawack
+# This file is distributed under the same license as the attrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: attrs 22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 12:37+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../license.md:1
+msgid "License and Credits"
+msgstr ""
+
+#: ../../license.md:3
+msgid ""
+"*attrs* is licensed under the "
+"[MIT](https://choosealicense.com/licenses/mit/) license. The full license"
+" text can be also found in the [source code "
+"repository](https://github.com/python-attrs/attrs/blob/main/LICENSE)."
+msgstr ""
+
+#: ../../license.md:6
+msgid "*attrs* is written and maintained by [Hynek Schlawack](https://hynek.me/)."
+msgstr ""
+
+#: ../../license.md:8
+msgid ""
+"The development is kindly supported by my employer [Variomedia "
+"AG](https://www.variomedia.de/), *attrs* [Tidelift "
+"subscribers](https://tidelift.com/subscription/pkg/pypi-attrs?utm_source"
+"=pypi-attrs&utm_medium=referral&utm_campaign=enterprise&utm_term=repo),  "
+"and all my amazing [GitHub Sponsors](https://github.com/sponsors/hynek)."
+msgstr ""
+
+#: ../../license.md:10
+msgid ""
+"A full list of contributors can be found in [GitHub's "
+"overview](https://github.com/python-attrs/attrs/graphs/contributors)."
+msgstr ""
+
+#: ../../license.md:12
+msgid ""
+"It’s the spiritual successor of "
+"[characteristic](https://characteristic.readthedocs.io/) and aspires to "
+"fix some of it clunkiness and unfortunate decisions. Both were inspired "
+"by Twisted’s "
+"[FancyEqMixin](https://docs.twisted.org/en/stable/api/twisted.python.util.FancyEqMixin.html)"
+" but both are implemented using class decorators because [subclassing is "
+"bad for you](https://www.youtube.com/watch?v=3MNVP9-hglc), m’kay?"
+msgstr ""
+

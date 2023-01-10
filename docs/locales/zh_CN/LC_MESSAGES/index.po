@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Hynek Schlawack
+# This file is distributed under the same license as the attrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: attrs 22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 12:37+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../index.md:1
+msgid "*attrs*: Classes Without Boilerplate"
+msgstr ""
+
+#: ../../index.md:3
+msgid "Release **{sub-ref}`release`**  ([What's new?](changelog.md))"
+msgstr ""
+
+#: ../../../README.md:1405
+msgid ""
+"*attrs* is the Python package that will bring back the **joy** of "
+"**writing classes** by relieving you from the drudgery of implementing "
+"object protocols (aka [dunder "
+"methods](https://www.attrs.org/en/latest/glossary.html#term-dunder-"
+"methods)). [Trusted by NASA](https://docs.github.com/en/account-and-"
+"profile/setting-up-and-managing-your-github-profile/customizing-your-"
+"profile/personalizing-your-profile#list-of-qualifying-repositories-for-"
+"mars-2020-helicopter-contributor-achievement) for Mars missions since "
+"2020!"
+msgstr ""
+
+#: ../../../README.md:1408
+msgid ""
+"Its main goal is to help you to write **concise** and **correct** "
+"software without slowing down your code."
+msgstr ""
+
+#: ../../../README.md:1411
+msgid "Sponsors"
+msgstr ""
+
+#: ../../../README.md:1413
+msgid ""
+"*attrs* would not be possible without our [amazing "
+"sponsors](https://github.com/sponsors/hynek). Especially those generously"
+" supporting us at the *The Organization* tier and higher:"
+msgstr ""
+
+#: ../../index.md:11
+msgid "Getting Started"
+msgstr ""
+
+#: ../../index.md:13
+msgid ""
+"*attrs* is a Python-only package [hosted on "
+"PyPI](https://pypi.org/project/attrs/). The recommended installation "
+"method is [pip](https://pip.pypa.io/en/stable/)-installing into a "
+"[virtualenv](https://hynek.me/articles/virtualenv-lives/):"
+msgstr ""
+
+#: ../../index.md:20
+msgid "The next steps will get you up and running in no time:"
+msgstr ""
+
+#: ../../index.md:22
+msgid ""
+"{doc}`overview` will show you a simple example of *attrs* in action and "
+"introduce you to its philosophy. Afterwards, you can start writing your "
+"own classes and understand what drives *attrs*'s design."
+msgstr ""
+
+#: ../../index.md:24
+msgid ""
+"{doc}`examples` will give you a comprehensive tour of *attrs*'s features."
+" After reading, you will know about our advanced features and how to use "
+"them."
+msgstr ""
+
+#: ../../index.md:26
+msgid ""
+"{doc}`why` gives you a rundown of potential alternatives and why we think"
+" *attrs* is still worthwhile -- depending on *your* needs even superior."
+msgstr ""
+
+#: ../../index.md:27
+msgid ""
+"If at any point you get confused by some terminology, please check out "
+"our {doc}`glossary`."
+msgstr ""
+
+#: ../../index.md:29
+msgid ""
+"If you need any help while getting started, feel free to use the `python-"
+"attrs` tag on [Stack Overflow](https://stackoverflow.com/questions/tagged"
+"/python-attrs) and someone will surely help you out!"
+msgstr ""
+
+#: ../../index.md:32
+msgid "Day-to-Day Usage"
+msgstr ""
+
+#: ../../index.md:34
+msgid ""
+"{doc}`types` help you to write *correct* and *self-documenting* code. "
+"*attrs* has first class support for them, yet keeps them optional if "
+"you’re not convinced!"
+msgstr ""
+
+#: ../../index.md:36
+msgid ""
+"Instance initialization is one of *attrs* key feature areas. Our goal is "
+"to relieve you from writing as much code as possible. {doc}`init` gives "
+"you an overview what *attrs* has to offer and explains some related "
+"philosophies we believe in."
+msgstr ""
+
+#: ../../index.md:39
+msgid ""
+"Comparing and ordering objects is a common task. {doc}`comparison` shows "
+"you how *attrs* helps you with that and how you can customize it."
+msgstr ""
+
+#: ../../index.md:41
+msgid ""
+"If you want to put objects into sets or use them as keys in dictionaries,"
+" they have to be hashable. The simplest way to do that is to use frozen "
+"classes, but the topic is more complex than it seems and {doc}`hashing` "
+"will give you a primer on what to look out for."
+msgstr ""
+
+#: ../../index.md:43
+msgid ""
+"Once you're comfortable with the concepts, our {doc}`api` contains all "
+"information you need to use *attrs* to its fullest."
+msgstr ""
+
+#: ../../index.md:44
+msgid ""
+"*attrs* is built for extension from the ground up. {doc}`extending` will "
+"show you the affordances it offers and how to make it a building block of"
+" your own projects."
+msgstr ""
+
+#: ../../index.md:46
+msgid ""
+"Finally, if you're confused by all the `attr.s`, `attr.ib`, `attrs`, "
+"`attrib`, `define`, `frozen`, and `field`, head over to {doc}`names` for "
+"a very short explanation, and optionally a quick history lesson."
+msgstr ""
+
+#: ../../index.md:49
+msgid "Project Information"
+msgstr ""
+
+#: ../../../README.md:5718
+msgid "[**Changelog**](https://www.attrs.org/en/stable/changelog.html)"
+msgstr ""
+
+#: ../../../README.md:5719
+msgid "[**Documentation**](https://www.attrs.org/)"
+msgstr ""
+
+#: ../../../README.md:5720
+msgid "[**PyPI**](https://pypi.org/project/attrs/)"
+msgstr ""
+
+#: ../../../README.md:5721
+msgid "[**Source Code**](https://github.com/python-attrs/attrs)"
+msgstr ""
+
+#: ../../../README.md:5722
+msgid ""
+"[**Contributing**](https://github.com/python-"
+"attrs/attrs/blob/main/.github/CONTRIBUTING.md)"
+msgstr ""
+
+#: ../../../README.md:5723
+msgid ""
+"[**Third-party Extensions**](https://github.com/python-attrs/attrs/wiki"
+"/Extensions-to-attrs)"
+msgstr ""
+
+#: ../../../README.md:5724
+msgid "**License**: [MIT](https://www.attrs.org/en/latest/license.html)"
+msgstr ""
+
+#: ../../../README.md:5725
+msgid ""
+"**Get Help**: please use the `python-attrs` tag on "
+"[StackOverflow](https://stackoverflow.com/questions/tagged/python-attrs)"
+msgstr ""
+
+#: ../../../README.md:5726
+msgid "**Supported Python Versions**: 3.6 and later"
+msgstr ""
+
+#: ../../../README.md:5729
+msgid "*attrs* for Enterprise"
+msgstr ""
+
+#: ../../../README.md:5731
+msgid "Available as part of the Tidelift Subscription."
+msgstr ""
+
+#: ../../../README.md:5733
+msgid ""
+"The maintainers of *attrs* and thousands of other packages are working "
+"with Tidelift to deliver commercial support and maintenance for the open "
+"source packages you use to build your applications. Save time, reduce "
+"risk, and improve code health, while paying the maintainers of the exact "
+"packages you use. [Learn more.](https://tidelift.com/subscription/pkg"
+"/pypi-attrs?utm_source=pypi-"
+"attrs&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)"
+msgstr ""
+
+#: ../../index.md:57
+msgid "Full Table of Contents"
+msgstr ""
+
+#: ../../index.md:83
+msgid "[Full Index](genindex)"
+msgstr ""
+

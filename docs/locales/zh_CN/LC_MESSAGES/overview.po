@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Hynek Schlawack
+# This file is distributed under the same license as the attrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: attrs 22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 12:37+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../overview.md:1
+msgid "Overview"
+msgstr ""
+
+#: ../../overview.md:3
+msgid ""
+"In order to fulfill its ambitious goal of bringing back the joy to "
+"writing classes, it gives you a class decorator and a way to "
+"declaratively define the attributes on that class:"
+msgstr ""
+
+#: ../../../README.md:3464
+msgid "After *declaring* your attributes, *attrs* gives you:"
+msgstr ""
+
+#: ../../../README.md:3466
+msgid "a concise and explicit overview of the class's attributes,"
+msgstr ""
+
+#: ../../../README.md:3467
+msgid "a nice human-readable `__repr__`,"
+msgstr ""
+
+#: ../../../README.md:3468
+msgid "equality-checking methods,"
+msgstr ""
+
+#: ../../../README.md:3469
+msgid "an initializer,"
+msgstr ""
+
+#: ../../../README.md:3470
+msgid "and much more,"
+msgstr ""
+
+#: ../../../README.md:3472
+msgid ""
+"*without* writing dull boilerplate code again and again and *without* "
+"runtime performance penalties."
+msgstr ""
+
+#: ../../../README.md:3474
+msgid ""
+"**Hate type annotations**!? No problem! Types are entirely **optional** "
+"with *attrs*. Simply assign `attrs.field()` to the attributes instead of "
+"annotating them with types."
+msgstr ""
+
+#: ../../../README.md:3481
+msgid ""
+"This example uses *attrs*'s modern APIs that have been introduced in "
+"version 20.1.0, and the *attrs* package import name that has been added "
+"in version 21.3.0. The classic APIs (`@attr.s`, `attr.ib`, plus their "
+"serious-business aliases) and the `attr` package import name will remain "
+"**indefinitely**."
+msgstr ""
+
+#: ../../../README.md:3484
+msgid ""
+"Please check out [*On The Core API "
+"Names*](https://www.attrs.org/en/latest/names.html) for a more in-depth "
+"explanation."
+msgstr ""
+
+#: ../../../README.md:3487
+msgid "Data Classes"
+msgstr ""
+
+#: ../../../README.md:3489
+msgid ""
+"On the tin, *attrs* might remind you of `dataclasses` (and indeed, "
+"`dataclasses` [are a descendant](https://hynek.me/articles/import-attrs/)"
+" of *attrs*). In practice it does a lot more and is more flexible. For "
+"instance it allows you to define [special handling of NumPy arrays for "
+"equality "
+"checks](https://www.attrs.org/en/stable/comparison.html#customization), "
+"or allows more ways to [plug into the initialization "
+"process](https://www.attrs.org/en/stable/init.html#hooking-yourself-into-"
+"initialization)."
+msgstr ""
+
+#: ../../../README.md:3493
+msgid ""
+"For more details, please refer to our [comparison "
+"page](https://www.attrs.org/en/stable/why.html#data-classes)."
+msgstr ""
+
+#: ../../overview.md:11
+msgid "Philosophy"
+msgstr ""
+
+#: ../../overview.md:13
+msgid "**It's about regular classes.**"
+msgstr ""
+
+#: ../../overview.md:15
+msgid ""
+"*attrs* is for creating well-behaved classes with a type, attributes, "
+"methods, and everything that comes with a class. It can be used for data-"
+"only containers like `namedtuple`s or `types.SimpleNamespace` but they're"
+" just a sub-genre of what *attrs* is good for."
+msgstr ""
+
+#: ../../overview.md:19
+msgid "**The class belongs to the users.**"
+msgstr ""
+
+#: ../../overview.md:21
+msgid ""
+"You define a class and *attrs* adds static methods to that class based on"
+" the attributes you declare. The end. It doesn't add metaclasses. It "
+"doesn't add classes you've never heard of to your inheritance tree. An "
+"*attrs* class in runtime is indistinguishable from a regular class: "
+"because it *is* a regular class with a few boilerplate-y methods "
+"attached."
+msgstr ""
+
+#: ../../overview.md:28
+msgid "**Be light on API impact.**"
+msgstr ""
+
+#: ../../overview.md:30
+msgid ""
+"As convenient as it seems at first, *attrs* will *not* tack on any "
+"methods to your classes except for the {term}`dunder ones <dunder "
+"methods>`. Hence all the useful [tools](helpers) that come with *attrs* "
+"live in functions that operate on top of instances. Since they take an "
+"*attrs* instance as their first argument, you can attach them to your "
+"classes with one line of code."
+msgstr ""
+
+#: ../../overview.md:35
+msgid "**Performance matters.**"
+msgstr ""
+
+#: ../../overview.md:37
+msgid ""
+"*attrs* runtime impact is very close to zero because all the work is done"
+" when the class is defined. Once you're instantiating it, *attrs* is out "
+"of the picture completely."
+msgstr ""
+
+#: ../../overview.md:41
+msgid "**No surprises.**"
+msgstr ""
+
+#: ../../overview.md:43
+msgid ""
+"*attrs* creates classes that arguably work the way a Python beginner "
+"would reasonably expect them to work. It doesn't try to guess what you "
+"mean because explicit is better than implicit. It doesn't try to be "
+"clever because software shouldn't be clever."
+msgstr ""
+
+#: ../../overview.md:47
+msgid ""
+"Check out {doc}`how-does-it-work` if you'd like to know how it achieves "
+"all of the above."
+msgstr ""
+
+#: ../../overview.md:50
+msgid "What *attrs* Is Not"
+msgstr ""
+
+#: ../../overview.md:52
+msgid ""
+"*attrs* does *not* invent some kind of magic system that pulls classes "
+"out of its hat using meta classes, runtime introspection, and shaky "
+"interdependencies."
+msgstr ""
+
+#: ../../overview.md:54
+msgid "All *attrs* does is:"
+msgstr ""
+
+#: ../../overview.md:56
+msgid "Take your declaration,"
+msgstr ""
+
+#: ../../overview.md:57
+msgid "write {term}`dunder methods` based on that information,"
+msgstr ""
+
+#: ../../overview.md:58
+msgid "and attach them to your class."
+msgstr ""
+
+#: ../../overview.md:60
+msgid ""
+"It does *nothing* dynamic at runtime, hence zero runtime overhead. It's "
+"still *your* class. Do with it as you please."
+msgstr ""
+

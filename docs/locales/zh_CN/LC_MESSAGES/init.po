@@ -1,0 +1,487 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Hynek Schlawack
+# This file is distributed under the same license as the attrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: attrs 22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 12:37+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../init.md:1
+msgid "Initialization"
+msgstr ""
+
+#: ../../init.md:3
+msgid ""
+"In Python, instance initialization happens in the `__init__` method. "
+"Generally speaking, you should keep as little logic as possible in it, "
+"and you should think about what the class needs and not how it is going "
+"to be instantiated."
+msgstr ""
+
+#: ../../init.md:6
+msgid ""
+"Passing complex objects into `__init__` and then using them to derive "
+"data for the class unnecessarily couples your new class with the old "
+"class which makes it harder to test and also will cause problems later."
+msgstr ""
+
+#: ../../init.md:8
+msgid ""
+"So assuming you use an ORM and want to extract 2D points from a row "
+"object, do not write code like this:"
+msgstr ""
+
+#: ../../init.md:19
+msgid "Instead, write a {obj}`classmethod` that will extract it for you:"
+msgstr ""
+
+#: ../../init.md:34
+msgid ""
+"Now you can instantiate `Point`s without creating fake row objects in "
+"your tests and you can have as many smart creation helpers as you want, "
+"in case more data sources appear."
+msgstr ""
+
+#: ../../init.md:36
+msgid "For similar reasons, we strongly discourage from patterns like:"
+msgstr ""
+
+#: ../../init.md:42
+msgid ""
+"which couples your classes to the database data model. Try to design your"
+" classes in a way that is clean and convenient to use -- not based on "
+"your database format. The database format can change anytime and you're "
+"stuck with a bad class design that is hard to change. Embrace functions "
+"and classmethods as a filter between reality and what's best for you to "
+"work with."
+msgstr ""
+
+#: ../../init.md:48
+msgid ""
+"While *attrs*'s initialization concepts (including the following sections"
+" about validators and converters) are powerful, they are **not** intended"
+" to replace a fully-featured serialization or validation system."
+msgstr ""
+
+#: ../../init.md:50
+msgid ""
+"We want to help you to write a `__init__` that you'd write by hand, but "
+"with less boilerplate."
+msgstr ""
+
+#: ../../init.md:52
+msgid ""
+"If you look for powerful-yet-unintrusive serialization and validation for"
+" your *attrs* classes, have a look at our sibling project "
+"[*cattrs*](https://catt.rs/) or our [third-party "
+"extensions](https://github.com/python-attrs/attrs/wiki/Extensions-to-"
+"attrs)."
+msgstr ""
+
+#: ../../init.md:57
+msgid "Private Attributes and Aliases"
+msgstr ""
+
+#: ../../init.md:59
+msgid ""
+"One thing people tend to find confusing is the treatment of private "
+"attributes that start with an underscore. *attrs* follows the doctrine "
+"that [there is no such thing as a private "
+"argument](https://github.com/hynek/characteristic/issues/6) and strips "
+"the underscores from the name when writing the `__init__` method "
+"signature:"
+msgstr ""
+
+#: ../../init.md:72
+msgid ""
+"There really isn't a right or wrong, it's a matter of taste. But it's "
+"important to be aware of it because it can lead to surprising syntax "
+"errors:"
+msgstr ""
+
+#: ../../init.md:84
+msgid ""
+"In this case a valid attribute name `_1` got transformed into an invalid "
+"argument name `1`."
+msgstr ""
+
+#: ../../init.md:86
+msgid ""
+"If your taste differs, you can use the *alias* argument to "
+"{func}`attrs.field` to explicitly set the argument name. This can be used"
+" to override private attribute handling, or make other arbitrary changes "
+"to `__init__` argument names."
+msgstr ""
+
+#: ../../init.md:100
+msgid "Defaults"
+msgstr ""
+
+#: ../../init.md:102
+msgid ""
+"Sometimes you don't want to pass all attribute values to a class. And "
+"sometimes, certain attributes aren't even intended to be passed but you "
+"want to allow for customization anyways for easier testing."
+msgstr ""
+
+#: ../../init.md:105
+msgid "This is when default values come into play:"
+msgstr ""
+
+#: ../../init.md:122
+msgid ""
+"It's important that the decorated method -- or any other method or "
+"property! -- doesn't have the same name as the attribute, otherwise it "
+"would overwrite the attribute definition."
+msgstr ""
+
+#: ../../init.md:124
+msgid ""
+"Please note that as with function and method signatures, `default=[]` "
+"will *not* do what you may think it might do:"
+msgstr ""
+
+#: ../../init.md:137
+msgid "This is why *attrs* comes with factory options."
+msgstr ""
+
+#: ../../init.md:140
+msgid ""
+"Please note that the decorator based defaults have one gotcha: they are "
+"executed when the attribute is set, that means depending on the order of "
+"attributes, the `self` object may not be fully initialized when they're "
+"called."
+msgstr ""
+
+#: ../../init.md:143
+msgid "Therefore you should use `self` as little as possible."
+msgstr ""
+
+#: ../../init.md:145
+msgid ""
+"Even the smartest of us can [get confused](https://github.com/python-"
+"attrs/attrs/issues/289) by what happens if you pass partially initialized"
+" objects around."
+msgstr ""
+
+#: ../../init.md:150
+msgid "Validators"
+msgstr ""
+
+#: ../../init.md:152
+msgid ""
+"Another thing that definitely *does* belong in `__init__` is checking the"
+" resulting instance for invariants. This is why *attrs* has the concept "
+"of validators."
+msgstr ""
+
+#: ../../init.md:156
+msgid "Decorator"
+msgstr ""
+
+#: ../../init.md:158
+msgid ""
+"The most straightforward way is using the attribute's `validator` method "
+"as a decorator."
+msgstr ""
+
+#: ../../init.md:160
+msgid "The method has to accept three arguments:"
+msgstr ""
+
+#: ../../init.md:162
+msgid "the *instance* that's being validated (aka `self`),"
+msgstr ""
+
+#: ../../init.md:163
+msgid "the *attribute* that it's validating, and finally"
+msgstr ""
+
+#: ../../init.md:164
+msgid "the *value* that is passed for it."
+msgstr ""
+
+#: ../../init.md:166
+msgid ""
+"These values are passed as *positional arguments*, therefore their names "
+"don't matter."
+msgstr ""
+
+#: ../../init.md:168
+msgid ""
+"If the value does not pass the validator's standards, it just raises an "
+"appropriate exception."
+msgstr ""
+
+#: ../../init.md:186
+msgid ""
+"Again, it's important that the decorated method doesn't have the same "
+"name as the attribute and that the {func}`attrs.field` helper is used."
+msgstr ""
+
+#: ../../init.md:189
+msgid "Callables"
+msgstr ""
+
+#: ../../init.md:191
+msgid ""
+"If you want to re-use your validators, you should have a look at the "
+"`validator` argument to {func}`attrs.field`."
+msgstr ""
+
+#: ../../init.md:193
+msgid ""
+"It takes either a callable or a list of callables (usually functions) and"
+" treats them as validators that receive the same arguments as with the "
+"decorator approach. Also as with the decorator approach, they are passed "
+"as *positional arguments* so you can name them however you want."
+msgstr ""
+
+#: ../../init.md:196
+msgid ""
+"Since the validators run *after* the instance is initialized, you can "
+"refer to other attributes while validating:"
+msgstr ""
+
+#: ../../init.md:216
+msgid ""
+"This example also shows of some syntactic sugar for using the "
+"{obj}`attrs.validators.and_` validator: if you pass a list, all "
+"validators have to pass."
+msgstr ""
+
+#: ../../init.md:218
+msgid ""
+"*attrs* won't intercept your changes to those attributes but you can "
+"always call {func}`attrs.validate` on any instance to verify that it's "
+"still valid: When using {func}`attrs.define` or "
+"[`attrs.frozen`](attrs.frozen), *attrs* will run the validators even when"
+" setting the attribute."
+msgstr ""
+
+#: ../../init.md:229
+msgid ""
+"*attrs* ships with a bunch of validators, make sure to [check them out]( "
+"api-validators) before writing your own:"
+msgstr ""
+
+#: ../../init.md:243
+msgid ""
+"Of course you can mix and match the two approaches at your convenience. "
+"If you define validators both ways for an attribute, they are both ran:"
+msgstr ""
+
+#: ../../init.md:266
+msgid "And finally you can disable validators globally:"
+msgstr ""
+
+#: ../../init.md:279
+msgid "You can achieve the same by using the context manager:"
+msgstr ""
+
+#: ../../init.md:293
+msgid "Converters"
+msgstr ""
+
+#: ../../init.md:295
+msgid ""
+"Finally, sometimes you may want to normalize the values coming in. For "
+"that *attrs* comes with converters."
+msgstr ""
+
+#: ../../init.md:298
+msgid ""
+"Attributes can have a `converter` function specified, which will be "
+"called with the attribute's passed-in value to get a new value to use. "
+"This can be useful for doing type-conversions on values that you don't "
+"want to force your callers to do."
+msgstr ""
+
+#: ../../init.md:310
+msgid ""
+"Converters are run *before* validators, so you can use validators to "
+"check the final form of the value."
+msgstr ""
+
+#: ../../init.md:328
+msgid "Arguably, you can abuse converters as one-argument validators:"
+msgstr ""
+
+#: ../../init.md:337
+msgid ""
+"If a converter's first argument has a type annotation, that type will "
+"appear in the signature for `__init__`. A converter will override an "
+"explicit type annotation or `type` argument."
+msgstr ""
+
+#: ../../init.md:351
+msgid "Hooking Yourself Into Initialization"
+msgstr ""
+
+#: ../../init.md:353
+msgid ""
+"Generally speaking, the moment you think that you need finer control over"
+" how your class is instantiated than what *attrs* offers, it's usually "
+"best to use a {obj}`classmethod` factory or to apply the [builder "
+"pattern](https://en.wikipedia.org/wiki/Builder_pattern)."
+msgstr ""
+
+#: ../../init.md:355
+msgid ""
+"However, sometimes you need to do that one quick thing before or after "
+"your class is initialized. And for that *attrs* offers three means:"
+msgstr ""
+
+#: ../../init.md:358
+msgid ""
+"`__attrs_pre_init__` is automatically detected and run *before* *attrs* "
+"starts initializing. This is useful if you need to inject a call to "
+"`super().__init__()`."
+msgstr ""
+
+#: ../../init.md:361
+msgid ""
+"`__attrs_post_init__` is automatically detected and run *after* *attrs* "
+"is done initializing your instance. This is useful if you want to derive "
+"some attribute from others or perform some kind of validation over the "
+"whole instance."
+msgstr ""
+
+#: ../../init.md:364
+msgid ""
+"`__attrs_init__` is written and attached to your class *instead* of "
+"`__init__`, if *attrs* is told to not write one (i.e. `init=False` or a "
+"combination of `auto_detect=True` and a custom `__init__`). This is "
+"useful if you want full control over the initialization process, but "
+"don't want to set the attributes by hand."
+msgstr ""
+
+#: ../../init.md:368
+msgid "Pre Init"
+msgstr ""
+
+#: ../../init.md:370
+msgid ""
+"The sole reason for the existence of `__attrs_pre_init__` is to give "
+"users the chance to call `super().__init__()`, because some subclassing-"
+"based APIs require that."
+msgstr ""
+
+#: ../../init.md:382
+msgid "If you need more control, use the custom init approach described next."
+msgstr ""
+
+#: ../../init.md:385
+msgid "Custom Init"
+msgstr ""
+
+#: ../../init.md:387
+msgid ""
+"If you tell *attrs* to not write an `__init__`, it will write an "
+"`__attrs_init__` instead, with the same code that it would have used for "
+"`__init__`. You have full control over the initialization, but also have "
+"to type out the types of your arguments etc. Here's an example of a "
+"manual default value:"
+msgstr ""
+
+#: ../../init.md:403
+msgid "Post Init"
+msgstr ""
+
+#: ../../init.md:416
+msgid "Please note that you can't directly set attributes on frozen classes:"
+msgstr ""
+
+#: ../../init.md:431
+msgid ""
+"If you need to set attributes on a frozen class, you'll have to resort to"
+" the [same trick](how-frozen) as *attrs* and use "
+"{meth}`object.__setattr__`:"
+msgstr ""
+
+#: ../../init.md:444
+msgid ""
+"Note that you *must not* access the hash code of the object in "
+"`__attrs_post_init__` if `cache_hash=True`."
+msgstr ""
+
+#: ../../init.md:447
+msgid "Order of Execution"
+msgstr ""
+
+#: ../../init.md:449
+msgid "If present, the hooks are executed in the following order:"
+msgstr ""
+
+#: ../../init.md:451
+msgid "`__attrs_pre_init__` (if present on *current* class)"
+msgstr ""
+
+#: ../../init.md:453
+msgid "For each attribute, in the order it was declared:"
+msgstr ""
+
+#: ../../init.md:455
+msgid "default factory"
+msgstr ""
+
+#: ../../init.md:456
+msgid "converter"
+msgstr ""
+
+#: ../../init.md:458
+msgid "*all* validators"
+msgstr ""
+
+#: ../../init.md:460
+msgid "`__attrs_post_init__` (if present on *current* class)"
+msgstr ""
+
+#: ../../init.md:462
+msgid ""
+"Notably this means, that you can access all attributes from within your "
+"validators, but your converters have to deal with invalid values and have"
+" to return a valid value."
+msgstr ""
+
+#: ../../init.md:465
+msgid "Derived Attributes"
+msgstr ""
+
+#: ../../init.md:467
+msgid ""
+"One of the most common *attrs* questions on *Stack Overflow* is how to "
+"have attributes that depend on other attributes. For example if you have "
+"an API token and want to instantiate a web client that uses it for "
+"authentication. Based on the previous sections, there are two approaches."
+msgstr ""
+
+#: ../../init.md:471
+msgid "The simpler one is using `__attrs_post_init__`:"
+msgstr ""
+
+#: ../../init.md:483
+msgid "The second one is using a decorator-based default:"
+msgstr ""
+
+#: ../../init.md:496
+msgid ""
+"That said, and as pointed out in the beginning of the chapter, a better "
+"approach would be to have a factory class method:"
+msgstr ""
+
+#: ../../init.md:508
+msgid "This makes the class more testable."
+msgstr ""
+

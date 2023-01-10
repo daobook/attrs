@@ -1,0 +1,2344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Hynek Schlawack
+# This file is distributed under the same license as the attrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: attrs 22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 12:37+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../api.rst:2
+msgid "API Reference"
+msgstr ""
+
+#: ../../api.rst:9
+msgid ""
+"*attrs* works by decorating a class using `attrs.define` or `attr.s` and "
+"then optionally defining attributes on the class using `attrs.field`, "
+"`attr.ib`, or a type annotation."
+msgstr ""
+
+#: ../../api.rst:11
+msgid ""
+"If you're confused by the many names, please check out `names` for "
+"clarification."
+msgstr ""
+
+#: ../../api.rst:13
+msgid ""
+"What follows is the API explanation, if you'd like a more hands-on "
+"introduction, have a look at `examples`."
+msgstr ""
+
+#: ../../api.rst:15
+msgid "As of version 21.3.0, *attrs* consists of **two** top-level package names:"
+msgstr ""
+
+#: ../../api.rst:17
+msgid "The classic ``attr`` that powered the venerable `attr.s` and `attr.ib`"
+msgstr ""
+
+#: ../../api.rst:18
+msgid ""
+"The modern ``attrs`` that only contains most modern APIs and relies on "
+"`attrs.define` and `attrs.field` to define your classes. Additionally it "
+"offers some ``attr`` APIs with nicer defaults (e.g. `attrs.asdict`)."
+msgstr ""
+
+#: ../../api.rst:21
+msgid ""
+"The ``attrs`` namespace is built *on top of* ``attr`` which will *never* "
+"go away."
+msgstr ""
+
+#: ../../api.rst:25
+msgid "Core"
+msgstr ""
+
+#: ../../api.rst:29
+msgid ""
+"Please note that the ``attrs`` namespace has been added in version "
+"21.3.0. Most of the objects are simply re-imported from ``attr``. "
+"Therefore if a class, method, or function claims that it has been added "
+"in an older version, it is only available in the ``attr`` namespace."
+msgstr ""
+
+#: ../../docstring attrs.NOTHING:1 of
+msgid "Sentinel to indicate the lack of a value when ``None`` is ambiguous."
+msgstr ""
+
+#: ../../docstring attrs.NOTHING:3 of
+msgid ""
+"If extending attrs, you can use ``typing.Literal[NOTHING]`` to show that "
+"a value may be ``NOTHING``."
+msgstr ""
+
+#: ../../docstring attrs.NOTHING:6 of
+msgid "``bool(NOTHING)`` is now False."
+msgstr ""
+
+#: ../../docstring attrs.NOTHING:7 of
+msgid "``NOTHING`` is now an ``enum.Enum`` variant."
+msgstr ""
+
+#: attr._next_gen.define:1 of
+msgid "Define an ``attrs`` class."
+msgstr ""
+
+#: attr._next_gen.define:3 of
+msgid "Differences to the classic `attr.s` that it uses underneath:"
+msgstr ""
+
+#: attr._next_gen.define:5 of
+msgid ""
+"Automatically detect whether or not *auto_attribs* should be `True` (c.f."
+" *auto_attribs* parameter)."
+msgstr ""
+
+#: attr._next_gen.define:7 of
+msgid ""
+"If *frozen* is `False`, run converters and validators when setting an "
+"attribute by default."
+msgstr ""
+
+#: attr._next_gen.define:9 of
+msgid "*slots=True*"
+msgstr ""
+
+#: attr._next_gen.define:13 of
+msgid ""
+"Usually this has only upsides and few visible effects in everyday "
+"programming. But it *can* lead to some suprising behaviors, so please "
+"make sure to read :term:`slotted classes`."
+msgstr ""
+
+#: attr._next_gen.define:16 of
+msgid "*auto_exc=True*"
+msgstr ""
+
+#: attr._next_gen.define:17 of
+msgid "*auto_detect=True*"
+msgstr ""
+
+#: attr._next_gen.define:18 of
+msgid "*order=False*"
+msgstr ""
+
+#: attr._next_gen.define:19 of
+msgid ""
+"Some options that were only relevant on Python 2 or were kept around for "
+"backwards-compatibility have been removed."
+msgstr ""
+
+#: attr._next_gen.define:22 of
+msgid ""
+"Please note that these are all defaults and you can change them as you "
+"wish."
+msgstr ""
+
+#: ../../api.rst attr._cmp.cmp_using attr._funcs.asdict attr._funcs.assoc
+#: attr._funcs.astuple attr._funcs.evolve attr._funcs.has
+#: attr._funcs.resolve_types attr._make.Factory attr._make.attrib
+#: attr._make.attrs attr._make.fields attr._make.fields_dict
+#: attr._make.make_class attr._make.validate attr._next_gen.define
+#: attr.converters.default_if_none attr.converters.optional
+#: attr.filters.exclude attr.filters.include attr.validators.deep_iterable
+#: attr.validators.deep_mapping attr.validators.ge attr.validators.gt
+#: attr.validators.in_ attr.validators.instance_of attr.validators.le
+#: attr.validators.lt attr.validators.matches_re attr.validators.max_len
+#: attr.validators.min_len attr.validators.not_ attr.validators.optional
+#: attr.validators.provides attr.validators.set_disabled of
+msgid "Parameters"
+msgstr ""
+
+#: attr._next_gen.define:25 of
+msgid ""
+"If set to `True` or `False`, it behaves exactly like `attr.s`. If left "
+"`None`, `attr.s` will try to guess:  1. If any attributes are annotated "
+"and no unannotated `attrs.fields`\\ s    are found, it assumes "
+"*auto_attribs=True*. 2. Otherwise it assumes *auto_attribs=False* and "
+"tries to collect    `attrs.fields`\\ s."
+msgstr ""
+
+#: attr._next_gen.define:25 of
+msgid ""
+"If set to `True` or `False`, it behaves exactly like `attr.s`. If left "
+"`None`, `attr.s` will try to guess:"
+msgstr ""
+
+#: attr._next_gen.define:28 of
+msgid ""
+"If any attributes are annotated and no unannotated `attrs.fields`\\ s are"
+" found, it assumes *auto_attribs=True*."
+msgstr ""
+
+#: attr._next_gen.define:30 of
+msgid ""
+"Otherwise it assumes *auto_attribs=False* and tries to collect "
+"`attrs.fields`\\ s."
+msgstr ""
+
+#: attr._next_gen.define:33 of
+msgid "For now, please refer to `attr.s` for the rest of the parameters."
+msgstr ""
+
+#: attr._next_gen.define:36 of
+msgid "Converters are also run ``on_setattr``."
+msgstr ""
+
+#: attr._make.attrs:250 attr._next_gen.define:37 of
+msgid "*unsafe_hash* as an alias for *hash* (for :pep:`681` compliance)."
+msgstr ""
+
+#: ../../api.rst:40
+msgid "Alias for `attrs.define`."
+msgstr ""
+
+#: ../../api.rst:46
+msgid ""
+"Behaves the same as `attrs.define` but sets *frozen=True* and "
+"*on_setattr=None*."
+msgstr ""
+
+#: attr._next_gen.field:1 of
+msgid ""
+"Identical to `attr.ib`, except keyword-only and with some arguments "
+"removed."
+msgstr ""
+
+#: ../../api.rst:54
+msgid "Old import path for `attrs.define`."
+msgstr ""
+
+#: ../../api.rst:58
+msgid "Old import path for `attrs.mutable`."
+msgstr ""
+
+#: ../../api.rst:62
+msgid "Old import path for `attrs.frozen`."
+msgstr ""
+
+#: ../../api.rst:66
+msgid "Old import path for `attrs.field`."
+msgstr ""
+
+#: attr._make.Attribute:1 of
+msgid "*Read-only* representation of an attribute."
+msgstr ""
+
+#: attr._make.Attribute:3 of
+msgid ""
+"The class has *all* arguments of `attr.ib` (except for ``factory`` which "
+"is only syntactic sugar for ``default=Factory(...)`` plus the following:"
+msgstr ""
+
+#: attr._make.Attribute:7 of
+msgid "``name`` (`str`): The name of the attribute."
+msgstr ""
+
+#: attr._make.Attribute:8 of
+msgid ""
+"``alias`` (`str`): The __init__ parameter name of the attribute, after "
+"any explicit overrides and default private-attribute-name handling."
+msgstr ""
+
+#: attr._make.Attribute:10 of
+msgid ""
+"``inherited`` (`bool`): Whether or not that attribute has been inherited "
+"from a base class."
+msgstr ""
+
+#: attr._make.Attribute:12 of
+msgid ""
+"``eq_key`` and ``order_key`` (`typing.Callable` or `None`): The callables"
+" that are used for comparing and ordering objects by this attribute, "
+"respectively. These are set by passing a callable to `attr.ib`'s ``eq``, "
+"``order``, or ``cmp`` arguments. See also :ref:`comparison customization "
+"<custom-comparison>`."
+msgstr ""
+
+#: attr._make.Attribute:18 of
+msgid ""
+"Instances of this class are frequently used for introspection purposes "
+"like:"
+msgstr ""
+
+#: attr._make.Attribute:21 of
+msgid "`fields` returns a tuple of them."
+msgstr ""
+
+#: attr._make.Attribute:22 of
+msgid "Validators get them passed as the first argument."
+msgstr ""
+
+#: attr._make.Attribute:23 of
+msgid ""
+"The :ref:`field transformer <transform-fields>` hook receives a list of "
+"them."
+msgstr ""
+
+#: attr._make.Attribute:25 of
+msgid ""
+"The ``alias`` property exposes the __init__ parameter name of the field, "
+"with any overrides and default private-attribute handling applied."
+msgstr ""
+
+#: attr._make.Attribute:29 of
+msgid "*inherited*"
+msgstr ""
+
+#: attr._make.Attribute:30 attr._make.attrib:125 attr._make.attrs:243 of
+msgid "*on_setattr*"
+msgstr ""
+
+#: attr._make.Attribute:31 of
+msgid ""
+"*inherited* is not taken into account for equality checks and hashing "
+"anymore."
+msgstr ""
+
+#: attr._make.Attribute:33 of
+msgid "*eq_key* and *order_key*"
+msgstr ""
+
+#: attr._make.Attribute:34 attr._make.attrib:130 of
+msgid "*alias*"
+msgstr ""
+
+#: attr._make.Attribute:36 of
+msgid "For the full version history of the fields, see `attr.ib`."
+msgstr ""
+
+#: ../../api.rst:71 ../../api.rst:87 ../../api.rst:105 ../../api.rst:135
+#: ../../api.rst:246 ../../api.rst:267 ../../api.rst:288 ../../api.rst:306
+#: ../../api.rst:337 ../../api.rst:352 ../../api.rst:388 ../../api.rst:418
+#: ../../api.rst:455 ../../api.rst:471 ../../api.rst:487 ../../api.rst:503
+#: ../../api.rst:519 ../../api.rst:535 ../../api.rst:551 ../../api.rst:571
+#: ../../api.rst:607 ../../api.rst:633 ../../api.rst:652 ../../api.rst:669
+#: ../../api.rst:687 ../../api.rst:711 ../../api.rst:762 ../../api.rst:777
+#: ../../api.rst:792
+msgid "For example:"
+msgstr ""
+
+#: attr._make.Attribute.evolve:1 of
+msgid "Copy *self* and apply *changes*."
+msgstr ""
+
+#: attr._make.Attribute.evolve:3 of
+msgid ""
+"This works similarly to `attr.evolve` but that function does not work "
+"with ``Attribute``."
+msgstr ""
+
+#: attr._make.Attribute.evolve:6 of
+msgid "It is mainly meant to be used for `transform-fields`."
+msgstr ""
+
+#: attr._make.make_class:1 of
+msgid "A quick way to create a new class called *name* with *attrs*."
+msgstr ""
+
+#: attr._make.make_class:3 of
+msgid "The name for the new class."
+msgstr ""
+
+#: attr._make.make_class:5 of
+msgid ""
+"A list of names or a dictionary of mappings of names to attributes.  The "
+"order is deduced from the order of the names or attributes inside "
+"*attrs*.  Otherwise the order of the definition of the attributes is "
+"used."
+msgstr ""
+
+#: attr._make.make_class:5 of
+msgid "A list of names or a dictionary of mappings of names to attributes."
+msgstr ""
+
+#: attr._make.make_class:8 of
+msgid ""
+"The order is deduced from the order of the names or attributes inside "
+"*attrs*.  Otherwise the order of the definition of the attributes is "
+"used."
+msgstr ""
+
+#: attr._make.make_class:13 of
+msgid "Classes that the new class will subclass."
+msgstr ""
+
+#: attr._make.make_class:15 of
+msgid "Passed unmodified to `attr.s`."
+msgstr ""
+
+#: attr._funcs.assoc attr._funcs.evolve attr._funcs.resolve_types
+#: attr._make.make_class attr.validators.get_disabled of
+msgid "Returns"
+msgstr ""
+
+#: attr._make.make_class:17 of
+msgid "A new class with *attrs*."
+msgstr ""
+
+#: attr._funcs.asdict attr._funcs.astuple attr._funcs.has attr._make.fields
+#: attr._make.fields_dict attr._make.make_class attr.filters.exclude
+#: attr.filters.include attr.validators.get_disabled of
+msgid "Return type"
+msgstr ""
+
+#: attr._make.make_class:20 of
+msgid "*bases*"
+msgstr ""
+
+#: attr._make.make_class:21 of
+msgid "If *attrs* is ordered, the order is retained."
+msgstr ""
+
+#: ../../api.rst:85
+msgid "This is handy if you want to programmatically create classes."
+msgstr ""
+
+#: attr._make.Factory:1 of
+msgid "Stores a factory callable."
+msgstr ""
+
+#: attr._make.Factory:3 of
+msgid ""
+"If passed as the default value to `attrs.field`, the factory is used to "
+"generate a new value."
+msgstr ""
+
+#: attr._make.Factory:6 of
+msgid ""
+"A callable that takes either none or exactly one mandatory positional "
+"argument depending on *takes_self*."
+msgstr ""
+
+#: attr._make.Factory:8 of
+msgid ""
+"Pass the partially initialized instance that is being initialized as a "
+"positional argument."
+msgstr ""
+
+#: attr._make.Factory:11 of
+msgid "*takes_self*"
+msgstr ""
+
+#: ../../api.rst:123
+msgid "Classic"
+msgstr ""
+
+#: ../../api.rst:127
+msgid "Same as `attrs.NOTHING`."
+msgstr ""
+
+#: attr._make.attrs:1 of
+msgid ""
+"A class decorator that adds :term:`dunder methods` according to the "
+"specified attributes using `attr.ib` or the *these* argument."
+msgstr ""
+
+#: attr._make.attrs:4 of
+msgid ""
+"A dictionary of name to `attr.ib` mappings.  This is useful to avoid the "
+"definition of your attributes within the class body because you can't "
+"(e.g. if you want to add ``__repr__`` methods to Django models) or don't "
+"want to.  If *these* is not ``None``, ``attrs`` will *not* search the "
+"class body for attributes and will *not* remove any attributes from it.  "
+"The order is deduced from the order of the attributes inside *these*."
+msgstr ""
+
+#: attr._make.attrs:4 of
+msgid ""
+"A dictionary of name to `attr.ib` mappings.  This is useful to avoid the "
+"definition of your attributes within the class body because you can't "
+"(e.g. if you want to add ``__repr__`` methods to Django models) or don't "
+"want to."
+msgstr ""
+
+#: attr._make.attrs:9 of
+msgid ""
+"If *these* is not ``None``, ``attrs`` will *not* search the class body "
+"for attributes and will *not* remove any attributes from it."
+msgstr ""
+
+#: attr._make.attrs:12 of
+msgid "The order is deduced from the order of the attributes inside *these*."
+msgstr ""
+
+#: attr._make.attrs:16 of
+msgid ""
+"When using nested classes, there's no way in Python 2 to automatically "
+"detect that.  Therefore it's possible to set the namespace explicitly for"
+" a more meaningful ``repr`` output."
+msgstr ""
+
+#: attr._make.attrs:19 of
+msgid ""
+"Instead of setting the *init*, *repr*, *eq*, *order*, and *hash* "
+"arguments explicitly, assume they are set to ``True`` **unless any** of "
+"the involved methods for one of the arguments is implemented in the "
+"*current* class (i.e. it is *not* inherited from some base class).  So "
+"for example by implementing ``__eq__`` on a class yourself, ``attrs`` "
+"will deduce ``eq=False`` and will create *neither* ``__eq__`` *nor* "
+"``__ne__`` (but Python classes come with a sensible ``__ne__`` by "
+"default, so it *should* be enough to only implement ``__eq__`` in most "
+"cases).  .. warning::     If you prevent ``attrs`` from creating the "
+"ordering methods for you    (``order=False``, e.g. by implementing "
+"``__le__``), it becomes    *your* responsibility to make sure its "
+"ordering is sound. The best    way is to use the "
+"`functools.total_ordering` decorator.   Passing ``True`` or ``False`` to "
+"*init*, *repr*, *eq*, *order*, *cmp*, or *hash* overrides whatever "
+"*auto_detect* would determine."
+msgstr ""
+
+#: attr._make.attrs:19 of
+msgid ""
+"Instead of setting the *init*, *repr*, *eq*, *order*, and *hash* "
+"arguments explicitly, assume they are set to ``True`` **unless any** of "
+"the involved methods for one of the arguments is implemented in the "
+"*current* class (i.e. it is *not* inherited from some base class)."
+msgstr ""
+
+#: attr._make.attrs:25 of
+msgid ""
+"So for example by implementing ``__eq__`` on a class yourself, ``attrs`` "
+"will deduce ``eq=False`` and will create *neither* ``__eq__`` *nor* "
+"``__ne__`` (but Python classes come with a sensible ``__ne__`` by "
+"default, so it *should* be enough to only implement ``__eq__`` in most "
+"cases)."
+msgstr ""
+
+#: attr._make.attrs:33 of
+msgid ""
+"If you prevent ``attrs`` from creating the ordering methods for you "
+"(``order=False``, e.g. by implementing ``__le__``), it becomes *your* "
+"responsibility to make sure its ordering is sound. The best way is to use"
+" the `functools.total_ordering` decorator."
+msgstr ""
+
+#: attr._make.attrs:39 of
+msgid ""
+"Passing ``True`` or ``False`` to *init*, *repr*, *eq*, *order*, *cmp*, or"
+" *hash* overrides whatever *auto_detect* would determine."
+msgstr ""
+
+#: attr._make.attrs:42 of
+msgid ""
+"Create a ``__repr__`` method with a human readable representation of "
+"``attrs`` attributes.."
+msgstr ""
+
+#: attr._make.attrs:44 of
+msgid ""
+"Create a ``__str__`` method that is identical to ``__repr__``.  This is "
+"usually not necessary except for `Exception`\\ s."
+msgstr ""
+
+#: attr._make.attrs:47 of
+msgid ""
+"If ``True`` or ``None`` (default), add ``__eq__`` and ``__ne__`` methods "
+"that check two instances for equality.  They compare the instances as if "
+"they were tuples of their ``attrs`` attributes if and only if the types "
+"of both classes are *identical*!"
+msgstr ""
+
+#: attr._make.attrs:47 of
+msgid ""
+"If ``True`` or ``None`` (default), add ``__eq__`` and ``__ne__`` methods "
+"that check two instances for equality."
+msgstr ""
+
+#: attr._make.attrs:50 of
+msgid ""
+"They compare the instances as if they were tuples of their ``attrs`` "
+"attributes if and only if the types of both classes are *identical*!"
+msgstr ""
+
+#: attr._make.attrs:52 of
+msgid ""
+"If ``True``, add ``__lt__``, ``__le__``, ``__gt__``, and ``__ge__`` "
+"methods that behave like *eq* above and allow instances to be ordered. If"
+" ``None`` (default) mirror value of *eq*."
+msgstr ""
+
+#: attr._make.attrib:68 attr._make.attrs:56 of
+msgid ""
+"Setting *cmp* is equivalent to setting *eq* and *order* to the same "
+"value. Must not be mixed with *eq* or *order*."
+msgstr ""
+
+#: attr._make.attrs:58 of
+msgid ""
+"If ``None`` (default), the ``__hash__`` method is generated according how"
+" *eq* and *frozen* are set.  1. If *both* are True, ``attrs`` will "
+"generate a ``__hash__`` for you. 2. If *eq* is True and *frozen* is "
+"False, ``__hash__`` will be set to    None, marking it unhashable (which "
+"it is). 3. If *eq* is False, ``__hash__`` will be left untouched meaning "
+"the    ``__hash__`` method of the base class will be used (if base class "
+"is    ``object``, this means it will fall back to id-based hashing.).  "
+"Although not recommended, you can decide for yourself and force ``attrs``"
+" to create one (e.g. if the class is immutable even though you didn't "
+"freeze it programmatically) by passing ``True`` or not.  Both of these "
+"cases are rather special and should be used carefully.  See our "
+"documentation on `hashing`, Python's documentation on `object.__hash__`, "
+"and the `GitHub issue that led to the default \\ behavior "
+"<https://github.com/python-attrs/attrs/issues/136>`_ for more details."
+msgstr ""
+
+#: attr._make.attrs:58 of
+msgid ""
+"If ``None`` (default), the ``__hash__`` method is generated according how"
+" *eq* and *frozen* are set."
+msgstr ""
+
+#: attr._make.attrs:61 of
+msgid "If *both* are True, ``attrs`` will generate a ``__hash__`` for you."
+msgstr ""
+
+#: attr._make.attrs:62 of
+msgid ""
+"If *eq* is True and *frozen* is False, ``__hash__`` will be set to None, "
+"marking it unhashable (which it is)."
+msgstr ""
+
+#: attr._make.attrs:64 of
+msgid ""
+"If *eq* is False, ``__hash__`` will be left untouched meaning the "
+"``__hash__`` method of the base class will be used (if base class is "
+"``object``, this means it will fall back to id-based hashing.)."
+msgstr ""
+
+#: attr._make.attrs:68 of
+msgid ""
+"Although not recommended, you can decide for yourself and force ``attrs``"
+" to create one (e.g. if the class is immutable even though you didn't "
+"freeze it programmatically) by passing ``True`` or not.  Both of these "
+"cases are rather special and should be used carefully."
+msgstr ""
+
+#: attr._make.attrs:73 of
+msgid ""
+"See our documentation on `hashing`, Python's documentation on "
+"`object.__hash__`, and the `GitHub issue that led to the default \\ "
+"behavior <https://github.com/python-attrs/attrs/issues/136>`_ for more "
+"details."
+msgstr ""
+
+#: attr._make.attrs:77 of
+msgid "Alias for *unsafe_hash*. *unsafe_hash* takes precedence."
+msgstr ""
+
+#: attr._make.attrs:79 of
+msgid ""
+"Create a ``__init__`` method that initializes the ``attrs`` attributes. "
+"Leading underscores are stripped for the argument name. If a "
+"``__attrs_pre_init__`` method exists on the class, it will be called "
+"before the class is initialized. If a ``__attrs_post_init__`` method "
+"exists on the class, it will be called after the class is fully "
+"initialized.  If ``init`` is ``False``, an ``__attrs_init__`` method will"
+" be injected instead. This allows you to define a custom ``__init__`` "
+"method that can do pre-init work such as ``super().__init__()``, and then"
+" call ``__attrs_init__()`` and ``__attrs_post_init__()``."
+msgstr ""
+
+#: attr._make.attrs:79 of
+msgid ""
+"Create a ``__init__`` method that initializes the ``attrs`` attributes. "
+"Leading underscores are stripped for the argument name. If a "
+"``__attrs_pre_init__`` method exists on the class, it will be called "
+"before the class is initialized. If a ``__attrs_post_init__`` method "
+"exists on the class, it will be called after the class is fully "
+"initialized."
+msgstr ""
+
+#: attr._make.attrs:86 of
+msgid ""
+"If ``init`` is ``False``, an ``__attrs_init__`` method will be injected "
+"instead. This allows you to define a custom ``__init__`` method that can "
+"do pre-init work such as ``super().__init__()``, and then call "
+"``__attrs_init__()`` and ``__attrs_post_init__()``."
+msgstr ""
+
+#: attr._make.attrs:90 of
+msgid ""
+"Create a :term:`slotted class <slotted classes>` that's more memory-"
+"efficient. Slotted classes are generally superior to the default dict "
+"classes, but have some gotchas you should know about, so we encourage you"
+" to read the :term:`glossary entry <slotted classes>`."
+msgstr ""
+
+#: attr._make.attrs:94 of
+msgid ""
+"Make instances immutable after initialization.  If someone attempts to "
+"modify a frozen instance, `attr.exceptions.FrozenInstanceError` is "
+"raised.  .. note::      1. This is achieved by installing a custom "
+"``__setattr__`` method        on your class, so you can't implement your "
+"own.      2. True immutability is impossible in Python.      3. This "
+"*does* have a minor a runtime performance `impact        <how-frozen>` "
+"when initializing new instances.  In other words:        ``__init__`` is "
+"slightly slower with ``frozen=True``.      4. If a class is frozen, you "
+"cannot modify ``self`` in        ``__attrs_post_init__`` or a self-"
+"written ``__init__``. You can        circumvent that limitation by using"
+"        ``object.__setattr__(self, \"attribute_name\", value)``.      5. "
+"Subclasses of a frozen class are frozen too."
+msgstr ""
+
+#: attr._make.attrs:94 of
+msgid ""
+"Make instances immutable after initialization.  If someone attempts to "
+"modify a frozen instance, `attr.exceptions.FrozenInstanceError` is "
+"raised."
+msgstr ""
+
+#: attr._make.attrs:100 of
+msgid ""
+"This is achieved by installing a custom ``__setattr__`` method on your "
+"class, so you can't implement your own."
+msgstr ""
+
+#: attr._make.attrs:103 of
+msgid "True immutability is impossible in Python."
+msgstr ""
+
+#: attr._make.attrs:105 of
+msgid ""
+"This *does* have a minor a runtime performance `impact <how-frozen>` when"
+" initializing new instances.  In other words: ``__init__`` is slightly "
+"slower with ``frozen=True``."
+msgstr ""
+
+#: attr._make.attrs:109 of
+msgid ""
+"If a class is frozen, you cannot modify ``self`` in "
+"``__attrs_post_init__`` or a self-written ``__init__``. You can "
+"circumvent that limitation by using ``object.__setattr__(self, "
+"\"attribute_name\", value)``."
+msgstr ""
+
+#: attr._make.attrs:114 of
+msgid "Subclasses of a frozen class are frozen too."
+msgstr ""
+
+#: attr._make.attrs:116 of
+msgid ""
+"Make instances weak-referenceable.  This has no effect unless ``slots`` "
+"is also enabled."
+msgstr ""
+
+#: attr._make.attrs:118 of
+msgid ""
+"If ``True``, collect :pep:`526`-annotated attributes from the class body."
+"  In this case, you **must** annotate every field.  If ``attrs`` "
+"encounters a field that is set to an `attr.ib` but lacks a type "
+"annotation, an `attr.exceptions.UnannotatedAttributeError` is raised.  "
+"Use ``field_name: typing.Any = attr.ib(...)`` if you don't want to set a "
+"type.  If you assign a value to those attributes (e.g. ``x: int = 42``), "
+"that value becomes the default value like if it were passed using "
+"``attr.ib(default=42)``.  Passing an instance of `attrs.Factory` also "
+"works as expected in most cases (see warning below).  Attributes "
+"annotated as `typing.ClassVar`, and attributes that are neither annotated"
+" nor set to an `attr.ib` are **ignored**.  .. warning::    For features "
+"that use the attribute name to create decorators (e.g.    `validators "
+"<validators>`), you still *must* assign `attr.ib` to    them. Otherwise "
+"Python will either not find the name or try to use    the default value "
+"to call e.g. ``validator`` on it.     These errors can be quite confusing"
+" and probably the most common bug    report on our bug tracker."
+msgstr ""
+
+#: attr._make.attrs:118 of
+msgid "If ``True``, collect :pep:`526`-annotated attributes from the class body."
+msgstr ""
+
+#: attr._make.attrs:121 of
+msgid ""
+"In this case, you **must** annotate every field.  If ``attrs`` encounters"
+" a field that is set to an `attr.ib` but lacks a type annotation, an "
+"`attr.exceptions.UnannotatedAttributeError` is raised.  Use ``field_name:"
+" typing.Any = attr.ib(...)`` if you don't want to set a type."
+msgstr ""
+
+#: attr._make.attrs:127 of
+msgid ""
+"If you assign a value to those attributes (e.g. ``x: int = 42``), that "
+"value becomes the default value like if it were passed using "
+"``attr.ib(default=42)``.  Passing an instance of `attrs.Factory` also "
+"works as expected in most cases (see warning below)."
+msgstr ""
+
+#: attr._make.attrs:132 of
+msgid ""
+"Attributes annotated as `typing.ClassVar`, and attributes that are "
+"neither annotated nor set to an `attr.ib` are **ignored**."
+msgstr ""
+
+#: attr._make.attrs:136 of
+msgid ""
+"For features that use the attribute name to create decorators (e.g. "
+"`validators <validators>`), you still *must* assign `attr.ib` to them. "
+"Otherwise Python will either not find the name or try to use the default "
+"value to call e.g. ``validator`` on it."
+msgstr ""
+
+#: attr._make.attrs:141 of
+msgid ""
+"These errors can be quite confusing and probably the most common bug "
+"report on our bug tracker."
+msgstr ""
+
+#: attr._make.attrs:144 of
+msgid ""
+"Make all attributes keyword-only in the generated ``__init__`` (if "
+"``init`` is ``False``, this parameter is ignored)."
+msgstr ""
+
+#: attr._make.attrs:147 of
+msgid ""
+"Ensure that the object's hash code is computed only once and stored on "
+"the object.  If this is set to ``True``, hashing must be either "
+"explicitly or implicitly enabled for this class.  If the hash code is "
+"cached, avoid any reassignments of fields involved in hash code "
+"computation or mutations of the objects those fields point to after "
+"object creation.  If such changes occur, the behavior of the object's "
+"hash code is undefined."
+msgstr ""
+
+#: attr._make.attrs:154 of
+msgid ""
+"If the class subclasses `BaseException` (which implicitly includes any "
+"subclass of any exception), the following happens to behave like a well-"
+"behaved Python exceptions class:  - the values for *eq*, *order*, and "
+"*hash* are ignored and the   instances compare and hash by the instance's"
+" ids (N.B. ``attrs`` will   *not* remove existing implementations of "
+"``__hash__`` or the equality   methods. It just won't add own ones.), - "
+"all attributes that are either passed into ``__init__`` or have a   "
+"default value are additionally available as a tuple in the ``args``   "
+"attribute, - the value of *str* is ignored leaving ``__str__`` to base "
+"classes."
+msgstr ""
+
+#: attr._make.attrs:154 of
+msgid ""
+"If the class subclasses `BaseException` (which implicitly includes any "
+"subclass of any exception), the following happens to behave like a well-"
+"behaved Python exceptions class:"
+msgstr ""
+
+#: attr._make.attrs:159 of
+msgid ""
+"the values for *eq*, *order*, and *hash* are ignored and the instances "
+"compare and hash by the instance's ids (N.B. ``attrs`` will *not* remove "
+"existing implementations of ``__hash__`` or the equality methods. It just"
+" won't add own ones.),"
+msgstr ""
+
+#: attr._make.attrs:163 of
+msgid ""
+"all attributes that are either passed into ``__init__`` or have a default"
+" value are additionally available as a tuple in the ``args`` attribute,"
+msgstr ""
+
+#: attr._make.attrs:166 of
+msgid "the value of *str* is ignored leaving ``__str__`` to base classes."
+msgstr ""
+
+#: attr._make.attrs:167 of
+msgid ""
+"Setting this to `True` fixes the way ``attrs`` collects attributes from "
+"base classes.  The default behavior is incorrect in certain cases of "
+"multiple inheritance.  It should be on by default but is kept off for "
+"backward-compatibility.  See issue `#428 <https://github.com/python-"
+"attrs/attrs/issues/428>`_ for more details."
+msgstr ""
+
+#: attr._make.attrs:167 of
+msgid ""
+"Setting this to `True` fixes the way ``attrs`` collects attributes from "
+"base classes.  The default behavior is incorrect in certain cases of "
+"multiple inheritance.  It should be on by default but is kept off for "
+"backward-compatibility."
+msgstr ""
+
+#: attr._make.attrs:172 of
+msgid ""
+"See issue `#428 <https://github.com/python-attrs/attrs/issues/428>`_ for "
+"more details."
+msgstr ""
+
+#: attr._make.attrs:175 of
+msgid ""
+".. note::    This is usually only interesting for slotted classes and you"
+" should    probably just set *auto_detect* to `True`.  If `True`, "
+"``__getstate__`` and ``__setstate__`` are generated and attached to the "
+"class. This is necessary for slotted classes to be pickleable. If left "
+"`None`, it's `True` by default for slotted classes and ``False`` for dict"
+" classes.  If *auto_detect* is `True`, and *getstate_setstate* is left "
+"`None`, and **either** ``__getstate__`` or ``__setstate__`` is detected "
+"directly on the class (i.e. not inherited), it is set to `False` (this is"
+" usually what you want)."
+msgstr ""
+
+#: attr._make.attrs:177 of
+msgid ""
+"This is usually only interesting for slotted classes and you should "
+"probably just set *auto_detect* to `True`."
+msgstr ""
+
+#: attr._make.attrs:180 of
+msgid ""
+"If `True`, ``__getstate__`` and ``__setstate__`` are generated and "
+"attached to the class. This is necessary for slotted classes to be "
+"pickleable. If left `None`, it's `True` by default for slotted classes "
+"and ``False`` for dict classes."
+msgstr ""
+
+#: attr._make.attrs:185 of
+msgid ""
+"If *auto_detect* is `True`, and *getstate_setstate* is left `None`, and "
+"**either** ``__getstate__`` or ``__setstate__`` is detected directly on "
+"the class (i.e. not inherited), it is set to `False` (this is usually "
+"what you want)."
+msgstr ""
+
+#: attr._make.attrs:190 of
+msgid ""
+"A callable that is run whenever the user attempts to set an attribute "
+"(either by assignment like ``i.x = 42`` or by using `setattr` like "
+"``setattr(i, \"x\", 42)``). It receives the same arguments as validators:"
+" the instance, the attribute that is being modified, and the new value.  "
+"If no exception is raised, the attribute is set to the return value of "
+"the callable.  If a list of callables is passed, they're automatically "
+"wrapped in an `attrs.setters.pipe`."
+msgstr ""
+
+#: attr._make.attrs:190 of
+msgid ""
+"A callable that is run whenever the user attempts to set an attribute "
+"(either by assignment like ``i.x = 42`` or by using `setattr` like "
+"``setattr(i, \"x\", 42)``). It receives the same arguments as validators:"
+" the instance, the attribute that is being modified, and the new value."
+msgstr ""
+
+#: attr._make.attrs:196 of
+msgid ""
+"If no exception is raised, the attribute is set to the return value of "
+"the callable."
+msgstr ""
+
+#: attr._make.attrs:199 of
+msgid ""
+"If a list of callables is passed, they're automatically wrapped in an "
+"`attrs.setters.pipe`."
+msgstr ""
+
+#: attr._make.attrs:204 of
+msgid ""
+"A function that is called with the original class object and all fields "
+"right before ``attrs`` finalizes the class.  You can use this, e.g., to "
+"automatically add converters or validators to fields based on their "
+"types.  See `transform-fields` for more details."
+msgstr ""
+
+#: attr._make.attrs:210 of
+msgid ""
+"If `True` (default), set ``__match_args__`` on the class to support "
+":pep:`634` (Structural Pattern Matching). It is a tuple of all non-"
+"keyword-only ``__init__`` parameter names on Python 3.10 and later. "
+"Ignored on older Python versions."
+msgstr ""
+
+#: attr._make.attrs:216 of
+msgid "*slots*"
+msgstr ""
+
+#: attr._make.attrs:217 of
+msgid "*frozen*"
+msgstr ""
+
+#: attr._make.attrs:218 of
+msgid "*str*"
+msgstr ""
+
+#: attr._make.attrs:219 of
+msgid "Support for ``__attrs_post_init__``."
+msgstr ""
+
+#: attr._make.attrs:220 of
+msgid "*hash* supports ``None`` as value which is also the default now."
+msgstr ""
+
+#: attr._make.attrs:222 of
+msgid "*auto_attribs*"
+msgstr ""
+
+#: attr._make.attrs:223 of
+msgid "If *these* is passed, no attributes are deleted from the class body."
+msgstr ""
+
+#: attr._make.attrs:225 of
+msgid "If *these* is ordered, the order is retained."
+msgstr ""
+
+#: attr._make.attrs:226 of
+msgid "*weakref_slot*"
+msgstr ""
+
+#: attr._make.attrs:227 of
+msgid ""
+"``__lt__``, ``__le__``, ``__gt__``, and ``__ge__`` now raise a "
+"`DeprecationWarning` if the classes compared are subclasses of each "
+"other. ``__eq`` and ``__ne__`` never tried to compared subclasses to each"
+" other."
+msgstr ""
+
+#: attr._make.attrs:232 of
+msgid ""
+"``__lt__``, ``__le__``, ``__gt__``, and ``__ge__`` now do not consider "
+"subclasses comparable anymore."
+msgstr ""
+
+#: attr._make.attrib:120 attr._make.attrs:235 of
+msgid "*kw_only*"
+msgstr ""
+
+#: attr._make.attrs:236 of
+msgid "*cache_hash*"
+msgstr ""
+
+#: attr._make.attrs:237 of
+msgid "*auto_exc*"
+msgstr ""
+
+#: attr._make.attrib:123 attr._make.attrs:238 of
+msgid "*cmp* Removal on or after 2021-06-01."
+msgstr ""
+
+#: attr._make.attrib:124 attr._make.attrs:239 of
+msgid "*eq* and *order*"
+msgstr ""
+
+#: attr._make.attrs:240 of
+msgid "*auto_detect*"
+msgstr ""
+
+#: attr._make.attrs:241 of
+msgid "*collect_by_mro*"
+msgstr ""
+
+#: attr._make.attrs:242 of
+msgid "*getstate_setstate*"
+msgstr ""
+
+#: attr._make.attrs:244 of
+msgid "*field_transformer*"
+msgstr ""
+
+#: attr._make.attrs:245 of
+msgid "``init=False`` injects ``__attrs_init__``"
+msgstr ""
+
+#: attr._make.attrs:247 of
+msgid "Support for ``__attrs_pre_init__``"
+msgstr ""
+
+#: attr._make.attrib:129 attr._make.attrs:248 of
+msgid "*cmp* undeprecated"
+msgstr ""
+
+#: attr._make.attrs:249 of
+msgid "*match_args*"
+msgstr ""
+
+#: ../../api.rst:133
+msgid "*attrs* also comes with a serious-business alias ``attr.attrs``."
+msgstr ""
+
+#: attr._make.attrib:1 of
+msgid "Create a new attribute on a class."
+msgstr ""
+
+#: attr._make.attrib:5 of
+msgid "Does *not* do anything unless the class is also decorated with `attr.s`!"
+msgstr ""
+
+#: attr._make.attrib:8 of
+msgid ""
+"A value that is used if an ``attrs``-generated ``__init__`` is used and "
+"no value is passed while instantiating or the attribute is excluded using"
+" ``init=False``.  If the value is an instance of `attrs.Factory`, its "
+"callable will be used to construct a new value (useful for mutable data "
+"types like lists or dicts).  If a default is not set (or set manually to "
+"`attrs.NOTHING`), a value *must* be supplied when instantiating; "
+"otherwise a `TypeError` will be raised.  The default can also be set "
+"using decorator notation as shown below."
+msgstr ""
+
+#: attr._make.attrib:8 of
+msgid ""
+"A value that is used if an ``attrs``-generated ``__init__`` is used and "
+"no value is passed while instantiating or the attribute is excluded using"
+" ``init=False``."
+msgstr ""
+
+#: attr._make.attrib:12 of
+msgid ""
+"If the value is an instance of `attrs.Factory`, its callable will be used"
+" to construct a new value (useful for mutable data types like lists or "
+"dicts)."
+msgstr ""
+
+#: attr._make.attrib:16 of
+msgid ""
+"If a default is not set (or set manually to `attrs.NOTHING`), a value "
+"*must* be supplied when instantiating; otherwise a `TypeError` will be "
+"raised."
+msgstr ""
+
+#: attr._make.attrib:20 of
+msgid "The default can also be set using decorator notation as shown below."
+msgstr ""
+
+#: attr._make.attrib:24 of
+msgid "Syntactic sugar for ``default=attr.Factory(factory)``."
+msgstr ""
+
+#: attr._make.attrib:27 of
+msgid ""
+"`callable` that is called by ``attrs``-generated ``__init__`` methods "
+"after the instance has been initialized.  They receive the initialized "
+"instance, the :func:`~attrs.Attribute`, and the passed value.  The return"
+" value is *not* inspected so the validator has to throw an exception "
+"itself.  If a `list` is passed, its items are treated as validators and "
+"must all pass.  Validators can be globally disabled and re-enabled using "
+"`get_run_validators`.  The validator can also be set using decorator "
+"notation as shown below."
+msgstr ""
+
+#: attr._make.attrib:27 of
+msgid ""
+"`callable` that is called by ``attrs``-generated ``__init__`` methods "
+"after the instance has been initialized.  They receive the initialized "
+"instance, the :func:`~attrs.Attribute`, and the passed value."
+msgstr ""
+
+#: attr._make.attrib:32 of
+msgid ""
+"The return value is *not* inspected so the validator has to throw an "
+"exception itself."
+msgstr ""
+
+#: attr._make.attrib:35 of
+msgid ""
+"If a `list` is passed, its items are treated as validators and must all "
+"pass."
+msgstr ""
+
+#: attr._make.attrib:38 of
+msgid ""
+"Validators can be globally disabled and re-enabled using "
+"`get_run_validators`."
+msgstr ""
+
+#: attr._make.attrib:41 of
+msgid "The validator can also be set using decorator notation as shown below."
+msgstr ""
+
+#: attr._make.attrib:45 of
+msgid ""
+"Include this attribute in the generated ``__repr__`` method. If ``True``,"
+" include the attribute; if ``False``, omit it. By default, the built-in "
+"``repr()`` function is used. To override how the attribute value is "
+"formatted, pass a ``callable`` that takes a single value and returns a "
+"string. Note that the resulting string is used as-is, i.e. it will be "
+"used directly *instead* of calling ``repr()`` (the default)."
+msgstr ""
+
+#: attr._make.attrib:54 of
+msgid ""
+"If ``True`` (default), include this attribute in the generated ``__eq__``"
+" and ``__ne__`` methods that check two instances for equality. To "
+"override how the attribute value is compared, pass a ``callable`` that "
+"takes a single value and returns the value to be compared."
+msgstr ""
+
+#: attr._make.attrib:61 of
+msgid ""
+"If ``True`` (default), include this attributes in the generated "
+"``__lt__``, ``__le__``, ``__gt__`` and ``__ge__`` methods. To override "
+"how the attribute value is ordered, pass a ``callable`` that takes a "
+"single value and returns the value to be ordered."
+msgstr ""
+
+#: attr._make.attrib:72 of
+msgid ""
+"Include this attribute in the generated ``__hash__`` method.  If ``None``"
+" (default), mirror *eq*'s value.  This is the correct behavior according "
+"the Python spec.  Setting this value to anything else than ``None`` is "
+"*discouraged*."
+msgstr ""
+
+#: attr._make.attrib:76 of
+msgid ""
+"Include this attribute in the generated ``__init__`` method.  It is "
+"possible to set this to ``False`` and set a default value.  In that case "
+"this attributed is unconditionally initialized with the specified default"
+" value or factory."
+msgstr ""
+
+#: attr._make.attrib:80 of
+msgid ""
+"`callable` that is called by ``attrs``-generated ``__init__`` methods to "
+"convert attribute's value to the desired format.  It is given the passed-"
+"in value, and the returned value will be used as the new value of the "
+"attribute.  The value is converted before being passed to the validator, "
+"if any."
+msgstr ""
+
+#: attr._make.attrib:85 of
+msgid ""
+"An arbitrary mapping, to be used by third-party components.  See "
+"`extending-metadata`."
+msgstr ""
+
+#: attr._make.attrib:88 of
+msgid ""
+"The type of the attribute. Nowadays, the preferred method to specify the "
+"type is using a variable annotation (see :pep:`526`). This argument is "
+"provided for backward compatibility. Regardless of the approach used, the"
+" type will be stored on ``Attribute.type``.  Please note that ``attrs`` "
+"doesn't do anything with this metadata by itself. You can use it as part "
+"of your own code or for `static type checking <types>`."
+msgstr ""
+
+#: attr._make.attrib:88 of
+msgid ""
+"The type of the attribute. Nowadays, the preferred method to specify the "
+"type is using a variable annotation (see :pep:`526`). This argument is "
+"provided for backward compatibility. Regardless of the approach used, the"
+" type will be stored on ``Attribute.type``."
+msgstr ""
+
+#: attr._make.attrib:94 of
+msgid ""
+"Please note that ``attrs`` doesn't do anything with this metadata by "
+"itself. You can use it as part of your own code or for `static type "
+"checking <types>`."
+msgstr ""
+
+#: attr._make.attrib:97 of
+msgid ""
+"Make this attribute keyword-only in the generated ``__init__`` (if "
+"``init`` is ``False``, this parameter is ignored)."
+msgstr ""
+
+#: attr._make.attrib:99 of
+msgid ""
+"Allows to overwrite the *on_setattr* setting from `attr.s`. If left "
+"`None`, the *on_setattr* value from `attr.s` is used. Set to "
+"`attrs.setters.NO_OP` to run **no** `setattr` hooks for this attribute --"
+" regardless of the setting in `attr.s`."
+msgstr ""
+
+#: attr._make.attrib:105 of
+msgid ""
+"Override this attribute's parameter name in the generated ``__init__`` "
+"method. If left `None`, default to ``name`` stripped of leading "
+"underscores. See `private-attributes`."
+msgstr ""
+
+#: attr._make.attrib:109 attr._make.attrib:115 of
+msgid "*convert*"
+msgstr ""
+
+#: attr._make.attrib:110 of
+msgid "*metadata*"
+msgstr ""
+
+#: attr._make.attrib:111 of
+msgid "*validator* can be a ``list`` now."
+msgstr ""
+
+#: attr._make.attrib:112 of
+msgid "*hash* is ``None`` and therefore mirrors *eq* by default."
+msgstr ""
+
+#: attr._make.attrib:114 of
+msgid "*type*"
+msgstr ""
+
+#: attr._make.attrib:116 of
+msgid ""
+"*converter* as a replacement for the deprecated *convert* to achieve "
+"consistency with other noun-based arguments."
+msgstr ""
+
+#: attr._make.attrib:118 of
+msgid "``factory=f`` is syntactic sugar for ``default=attr.Factory(f)``."
+msgstr ""
+
+#: attr._make.attrib:121 of
+msgid "*convert* keyword argument removed."
+msgstr ""
+
+#: attr._make.attrib:122 of
+msgid "*repr* also accepts a custom callable."
+msgstr ""
+
+#: attr._make.attrib:126 of
+msgid "*kw_only* backported to Python 2"
+msgstr ""
+
+#: attr._make.attrib:127 of
+msgid "*eq*, *order*, and *cmp* also accept a custom callable"
+msgstr ""
+
+#: ../../api.rst:173
+msgid "*attrs* also comes with a serious-business alias ``attr.attrib``."
+msgstr ""
+
+#: ../../api.rst:175
+msgid ""
+"The object returned by `attr.ib` also allows for setting the default and "
+"the validator using decorators:"
+msgstr ""
+
+#: ../../api.rst:200
+msgid "Exceptions"
+msgstr ""
+
+#: ../../api.rst:202
+msgid ""
+"All exceptions are available from both ``attr.exceptions`` and "
+"``attrs.exceptions`` and are the same thing. That means that it doesn't "
+"matter from from which namespace they've been raised and/or caught:"
+msgstr ""
+
+#: attr.exceptions.PythonTooOldError:1 of
+msgid ""
+"It was attempted to use an ``attrs`` feature that requires a newer Python"
+" version."
+msgstr ""
+
+#: attr.exceptions.FrozenError:1 of
+msgid ""
+"A frozen/immutable instance or attribute have been attempted to be "
+"modified."
+msgstr ""
+
+#: attr.exceptions.FrozenError:4 of
+msgid ""
+"It mirrors the behavior of ``namedtuples`` by using the same error "
+"message and subclassing `AttributeError`."
+msgstr ""
+
+#: attr.exceptions.FrozenInstanceError:1 of
+msgid "A frozen instance has been attempted to be modified."
+msgstr ""
+
+#: attr.exceptions.FrozenAttributeError:1 of
+msgid "A frozen attribute has been attempted to be modified."
+msgstr ""
+
+#: attr.exceptions.AttrsAttributeNotFoundError:1 of
+msgid "An ``attrs`` function couldn't find an attribute that the user asked for."
+msgstr ""
+
+#: attr.exceptions.NotAnAttrsClassError:1 of
+msgid "A non-``attrs`` class has been passed into an ``attrs`` function."
+msgstr ""
+
+#: attr.exceptions.DefaultAlreadySetError:1 of
+msgid ""
+"A default has been set using ``attr.ib()`` and is attempted to be reset "
+"using the decorator."
+msgstr ""
+
+#: attr.exceptions.UnannotatedAttributeError:1 of
+msgid ""
+"A class with ``auto_attribs=True`` has an ``attr.ib()`` without a type "
+"annotation."
+msgstr ""
+
+#: attr.exceptions.NotCallableError:1 of
+msgid ""
+"A ``attr.ib()`` requiring a callable has been set with a value that is "
+"not callable."
+msgstr ""
+
+#: ../../api.rst:224
+msgid "For example::"
+msgstr ""
+
+#: ../../api.rst:235
+msgid "Helpers"
+msgstr ""
+
+#: ../../api.rst:237
+msgid ""
+"*attrs* comes with a bunch of helper methods that make working with it "
+"easier:"
+msgstr ""
+
+#: attr._cmp.cmp_using:1 of
+msgid ""
+"Create a class that can be passed into `attr.ib`'s ``eq``, ``order``, and"
+" ``cmp`` arguments to customize field comparison."
+msgstr ""
+
+#: attr._cmp.cmp_using:4 of
+msgid ""
+"The resulting class will have a full set of ordering methods if at least "
+"one of ``{lt, le, gt, ge}`` and ``eq``  are provided."
+msgstr ""
+
+#: attr._cmp.cmp_using:7 of
+msgid "`callable` used to evaluate equality of two objects."
+msgstr ""
+
+#: attr._cmp.cmp_using:9 of
+msgid ""
+"`callable` used to evaluate whether one object is less than another "
+"object."
+msgstr ""
+
+#: attr._cmp.cmp_using:11 of
+msgid ""
+"`callable` used to evaluate whether one object is less than or equal to "
+"another object."
+msgstr ""
+
+#: attr._cmp.cmp_using:13 of
+msgid ""
+"`callable` used to evaluate whether one object is greater than another "
+"object."
+msgstr ""
+
+#: attr._cmp.cmp_using:15 of
+msgid ""
+"`callable` used to evaluate whether one object is greater than or equal "
+"to another object."
+msgstr ""
+
+#: attr._cmp.cmp_using:18 of
+msgid ""
+"When `True`, equality and ordering methods will return `NotImplemented` "
+"if objects are not of the same type."
+msgstr ""
+
+#: attr._cmp.cmp_using:21 of
+msgid "Name of class. Defaults to 'Comparable'."
+msgstr ""
+
+#: attr._cmp.cmp_using:23 of
+msgid "See `comparison` for more details."
+msgstr ""
+
+#: ../../api.rst:242
+msgid "Same as `attrs.cmp_using`."
+msgstr ""
+
+#: attr._make.fields:1 of
+msgid "Return the tuple of ``attrs`` attributes for a class."
+msgstr ""
+
+#: attr._make.fields:3 of
+msgid ""
+"The tuple also allows accessing the fields by their names (see below for "
+"examples)."
+msgstr ""
+
+#: attr._funcs.has:3 attr._make.fields:6 attr._make.fields_dict:4 of
+msgid "Class to introspect."
+msgstr ""
+
+#: attr._funcs.asdict attr._funcs.assoc attr._funcs.astuple attr._funcs.evolve
+#: attr._funcs.has attr._funcs.resolve_types attr._make.fields
+#: attr._make.fields_dict attr.converters.default_if_none
+#: attr.converters.to_bool attr.validators.deep_iterable
+#: attr.validators.deep_mapping attr.validators.in_ attr.validators.instance_of
+#: attr.validators.is_callable attr.validators.not_ attr.validators.provides of
+msgid "Raises"
+msgstr ""
+
+#: attr._funcs.has:4 attr._funcs.resolve_types:20 attr._make.fields:8
+#: attr._make.fields_dict:6 of
+msgid "If *cls* is not a class."
+msgstr ""
+
+#: attr._funcs.asdict:25 attr._funcs.assoc:10 attr._funcs.astuple:21
+#: attr._funcs.evolve:10 attr._make.fields:9 attr._make.fields_dict:7 of
+msgid "If *cls* is not an ``attrs`` class."
+msgstr ""
+
+#: attr._make.fields:12 of
+msgid "tuple (with name accessors) of `attrs.Attribute`"
+msgstr ""
+
+#: attr._make.fields:14 of
+msgid "Returned tuple allows accessing the fields by name."
+msgstr ""
+
+#: ../../api.rst:263
+msgid "Same as `attrs.fields`."
+msgstr ""
+
+#: attr._make.fields_dict:1 of
+msgid ""
+"Return an ordered dictionary of ``attrs`` attributes for a class, whose "
+"keys are the attribute names."
+msgstr ""
+
+#: ../../api.rst:284
+msgid "Same as `attrs.fields_dict`."
+msgstr ""
+
+#: attr._funcs.has:1 of
+msgid "Check whether *cls* is a class with ``attrs`` attributes."
+msgstr ""
+
+#: ../../api.rst:302
+msgid "Same as `attrs.has`."
+msgstr ""
+
+#: attr._funcs.resolve_types:1 of
+msgid "Resolve any strings and forward annotations in type annotations."
+msgstr ""
+
+#: attr._funcs.resolve_types:3 of
+msgid ""
+"This is only required if you need concrete types in `Attribute`'s *type* "
+"field. In other words, you don't need to resolve your types if you only "
+"use them for static type checking."
+msgstr ""
+
+#: attr._funcs.resolve_types:7 of
+msgid ""
+"With no arguments, names will be looked up in the module in which the "
+"class was created. If this is not what you want, e.g. if the name only "
+"exists inside a method, you may pass *globalns* or *localns* to specify "
+"other dictionaries in which to look up these names. See the docs of "
+"`typing.get_type_hints` for more details."
+msgstr ""
+
+#: attr._funcs.resolve_types:13 of
+msgid "Class to resolve."
+msgstr ""
+
+#: attr._funcs.resolve_types:14 of
+msgid "Dictionary containing global variables."
+msgstr ""
+
+#: attr._funcs.resolve_types:15 of
+msgid "Dictionary containing local variables."
+msgstr ""
+
+#: attr._funcs.resolve_types:16 of
+msgid ""
+"List of attribs for the given class. This is necessary when calling from "
+"inside a ``field_transformer`` since *cls* is not an ``attrs`` class yet."
+msgstr ""
+
+#: attr._funcs.resolve_types:21 of
+msgid "If *cls* is not an ``attrs`` class and you didn't pass any attribs."
+msgstr ""
+
+#: attr._funcs.resolve_types:23 of
+msgid "If types cannot be resolved because of missing variables."
+msgstr ""
+
+#: attr._funcs.resolve_types:25 of
+msgid ""
+"*cls* so you can use this function also as a class decorator. Please note"
+" that you have to apply it **after** `attrs.define`. That means the "
+"decorator has to come in the line **before** `attrs.define`."
+msgstr ""
+
+#: attr._funcs.resolve_types:30 of
+msgid "*attribs*"
+msgstr ""
+
+#: ../../api.rst:333
+msgid "Same as `attrs.resolve_types`."
+msgstr ""
+
+#: attr._next_gen.asdict:1 of
+msgid ""
+"Same as `attr.asdict`, except that collections types are always retained "
+"and dict is always used as *dict_factory*."
+msgstr ""
+
+#: attr._funcs.asdict:1 of
+msgid "Return the ``attrs`` attribute values of *inst* as a dict."
+msgstr ""
+
+#: attr._funcs.asdict:3 attr._funcs.astuple:3 of
+msgid "Optionally recurse into other ``attrs``-decorated classes."
+msgstr ""
+
+#: attr._funcs.asdict:5 attr._funcs.astuple:5 of
+msgid "Instance of an ``attrs``-decorated class."
+msgstr ""
+
+#: attr._funcs.asdict:6 attr._funcs.astuple:6 of
+msgid "Recurse into classes that are also ``attrs``-decorated."
+msgstr ""
+
+#: attr._funcs.asdict:8 attr._funcs.astuple:8 of
+msgid ""
+"A callable whose return code determines whether an attribute or element "
+"is included (``True``) or dropped (``False``).  Is called with the "
+"`attrs.Attribute` as the first argument and the value as the second "
+"argument."
+msgstr ""
+
+#: attr._funcs.asdict:12 of
+msgid ""
+"A callable to produce dictionaries from.  For example, to produce ordered"
+" dictionaries instead of normal Python dictionaries, pass in "
+"``collections.OrderedDict``."
+msgstr ""
+
+#: attr._funcs.asdict:15 of
+msgid ""
+"Do not convert to ``list`` when encountering an attribute whose type is "
+"``tuple`` or ``set``.  Only meaningful if ``recurse`` is ``True``."
+msgstr ""
+
+#: attr._funcs.asdict:18 of
+msgid ""
+"A hook that is called for every attribute or dict key/value.  It receives"
+" the current instance, field and value and must return the (updated) "
+"value.  The hook is run *after* the optional *filter* has been applied."
+msgstr ""
+
+#: attr._funcs.asdict:23 of
+msgid "return type of *dict_factory*"
+msgstr ""
+
+#: attr._funcs.asdict:28 of
+msgid "*dict_factory*"
+msgstr ""
+
+#: attr._funcs.asdict:29 of
+msgid "*retain_collection_types*"
+msgstr ""
+
+#: attr._funcs.asdict:30 of
+msgid "*value_serializer*"
+msgstr ""
+
+#: attr._funcs.asdict:31 of
+msgid "If a dict has a collection for a key, it is serialized as a tuple."
+msgstr ""
+
+#: attr._next_gen.astuple:1 of
+msgid ""
+"Same as `attr.astuple`, except that collections types are always retained"
+" and `tuple` is always used as the *tuple_factory*."
+msgstr ""
+
+#: attr._funcs.astuple:1 of
+msgid "Return the ``attrs`` attribute values of *inst* as a tuple."
+msgstr ""
+
+#: attr._funcs.astuple:12 of
+msgid ""
+"A callable to produce tuples from.  For example, to produce lists instead"
+" of tuples."
+msgstr ""
+
+#: attr._funcs.astuple:14 of
+msgid ""
+"Do not convert to ``list`` or ``dict`` when encountering an attribute "
+"which type is ``tuple``, ``dict`` or ``set``.  Only meaningful if "
+"``recurse`` is ``True``."
+msgstr ""
+
+#: attr._funcs.astuple:19 of
+msgid "return type of *tuple_factory*"
+msgstr ""
+
+#: ../../api.rst:366
+msgid ""
+"*attrs* includes some handy helpers for filtering the attributes in "
+"`attrs.asdict` and `attrs.astuple`:"
+msgstr ""
+
+#: attr.filters.include:1 of
+msgid "Include *what*."
+msgstr ""
+
+#: attr.filters.include:3 of
+msgid "What to include."
+msgstr ""
+
+#: attr.filters.exclude:6 attr.filters.include:6 of
+msgid "`callable`"
+msgstr ""
+
+#: attr.filters.exclude:1 of
+msgid "Exclude *what*."
+msgstr ""
+
+#: attr.filters.exclude:3 of
+msgid "What to exclude."
+msgstr ""
+
+#: ../../api.rst:374
+msgid "Same as `attrs.filters.include`."
+msgstr ""
+
+#: ../../api.rst:378
+msgid "Same as `attrs.filters.exclude`."
+msgstr ""
+
+#: ../../api.rst:380
+msgid "See :func:`attrs.asdict` for examples."
+msgstr ""
+
+#: ../../api.rst:382
+msgid ""
+"All objects from ``attrs.filters`` are also available from "
+"``attr.filters``."
+msgstr ""
+
+#: attr._funcs.evolve:1 of
+msgid "Create a new instance, based on *inst* with *changes* applied."
+msgstr ""
+
+#: attr._funcs.assoc:3 attr._funcs.evolve:3 attr._make.validate:5 of
+msgid "Instance of a class with ``attrs`` attributes."
+msgstr ""
+
+#: attr._funcs.assoc:4 attr._funcs.evolve:4 of
+msgid "Keyword changes in the new copy."
+msgstr ""
+
+#: attr._funcs.assoc:6 attr._funcs.evolve:6 of
+msgid "A copy of inst with *changes* incorporated."
+msgstr ""
+
+#: attr._funcs.evolve:8 of
+msgid "If *attr_name* couldn't be found in the class ``__init__``."
+msgstr ""
+
+#: ../../api.rst:405
+msgid ""
+"``evolve`` creates a new instance using ``__init__``. This fact has "
+"several implications:"
+msgstr ""
+
+#: ../../api.rst:408
+msgid ""
+"private attributes should be specified without the leading underscore, "
+"just like in ``__init__``."
+msgstr ""
+
+#: ../../api.rst:409
+msgid "attributes with ``init=False`` can't be set with ``evolve``."
+msgstr ""
+
+#: ../../api.rst:410
+msgid "the usual ``__init__`` validators will validate the new values."
+msgstr ""
+
+#: ../../api.rst:414
+msgid "Same as `attrs.evolve`."
+msgstr ""
+
+#: attr._make.validate:1 of
+msgid "Validate all attributes on *inst* that have a validator."
+msgstr ""
+
+#: attr._make.validate:3 of
+msgid "Leaves all exceptions through."
+msgstr ""
+
+#: ../../api.rst:434
+msgid "Same as `attrs.validate`."
+msgstr ""
+
+#: ../../api.rst:437
+msgid ""
+"Validators can be globally disabled if you want to run them only in "
+"development and tests but not in production because you fear their "
+"performance impact:"
+msgstr ""
+
+#: attr._config.set_run_validators:1 of
+msgid "Set whether or not validators are run.  By default, they are run."
+msgstr ""
+
+#: attr._config.set_run_validators:3 of
+msgid ""
+"It will not be removed, but it also will not be moved to new ``attrs`` "
+"namespace. Use `attrs.validators.set_disabled()` instead."
+msgstr ""
+
+#: attr._config.get_run_validators:1 of
+msgid "Return whether or not validators are run."
+msgstr ""
+
+#: attr._config.get_run_validators:3 of
+msgid ""
+"It will not be removed, but it also will not be moved to new ``attrs`` "
+"namespace. Use `attrs.validators.get_disabled()` instead."
+msgstr ""
+
+#: ../../api.rst:447
+msgid "Validators"
+msgstr ""
+
+#: ../../api.rst:449
+msgid ""
+"*attrs* comes with some common validators in the ``attrs.validators`` "
+"module. All objects from ``attrs.validators`` are also available from "
+"``attr.validators``."
+msgstr ""
+
+#: attr.validators.lt:1 of
+msgid ""
+"A validator that raises `ValueError` if the initializer is called with a "
+"number larger or equal to *val*."
+msgstr ""
+
+#: attr.validators.lt:4 of
+msgid "Exclusive upper bound for values"
+msgstr ""
+
+#: attr.validators.le:1 of
+msgid ""
+"A validator that raises `ValueError` if the initializer is called with a "
+"number greater than *val*."
+msgstr ""
+
+#: attr.validators.le:4 of
+msgid "Inclusive upper bound for values"
+msgstr ""
+
+#: attr.validators.ge:1 of
+msgid ""
+"A validator that raises `ValueError` if the initializer is called with a "
+"number smaller than *val*."
+msgstr ""
+
+#: attr.validators.ge:4 of
+msgid "Inclusive lower bound for values"
+msgstr ""
+
+#: attr.validators.gt:1 of
+msgid ""
+"A validator that raises `ValueError` if the initializer is called with a "
+"number smaller or equal to *val*."
+msgstr ""
+
+#: attr.validators.gt:4 of
+msgid "Exclusive lower bound for values"
+msgstr ""
+
+#: attr.validators.max_len:1 of
+msgid ""
+"A validator that raises `ValueError` if the initializer is called with a "
+"string or iterable that is longer than *length*."
+msgstr ""
+
+#: attr.validators.max_len:4 of
+msgid "Maximum length of the string or iterable"
+msgstr ""
+
+#: attr.validators.min_len:1 of
+msgid ""
+"A validator that raises `ValueError` if the initializer is called with a "
+"string or iterable that is shorter than *length*."
+msgstr ""
+
+#: attr.validators.min_len:4 of
+msgid "Minimum length of the string or iterable"
+msgstr ""
+
+#: attr.validators.instance_of:1 of
+msgid ""
+"A validator that raises a `TypeError` if the initializer is called with a"
+" wrong type for this particular attribute (checks are performed using "
+"`isinstance` therefore it's also valid to pass a tuple of types)."
+msgstr ""
+
+#: attr.validators.instance_of:5 of
+msgid "The type to check for."
+msgstr ""
+
+#: attr.validators.instance_of:8 of
+msgid ""
+"With a human readable error message, the attribute (of type "
+"`attrs.Attribute`), the expected type, and the value it got."
+msgstr ""
+
+#: attr.validators.in_:1 of
+msgid ""
+"A validator that raises a `ValueError` if the initializer is called with "
+"a value that does not belong in the options provided.  The check is "
+"performed using ``value in options``."
+msgstr ""
+
+#: attr.validators.in_:5 of
+msgid "Allowed options."
+msgstr ""
+
+#: attr.validators.in_:8 of
+msgid ""
+"With a human readable error message, the attribute (of type "
+"`attrs.Attribute`), the expected options, and the value it got."
+msgstr ""
+
+#: attr.validators.in_:13 of
+msgid ""
+"The ValueError was incomplete until now and only contained the human "
+"readable error message. Now it contains all the information that has been"
+" promised since 17.1.0."
+msgstr ""
+
+#: attr.validators.provides:1 of
+msgid ""
+"A validator that raises a `TypeError` if the initializer is called with "
+"an object that does not provide the requested *interface* (checks are "
+"performed using ``interface.providedBy(value)`` (see `zope.interface "
+"<https://zopeinterface.readthedocs.io/en/latest/>`_)."
+msgstr ""
+
+#: attr.validators.provides:6 of
+msgid "The interface to check for."
+msgstr ""
+
+#: attr.validators.provides:9 of
+msgid ""
+"With a human readable error message, the attribute (of type "
+"`attrs.Attribute`), the expected interface, and the value it got."
+msgstr ""
+
+#: attr._make.and_:1 of
+msgid "A validator that composes multiple validators into one."
+msgstr ""
+
+#: attr._make.and_:3 of
+msgid "When called on a value, it runs all wrapped validators."
+msgstr ""
+
+#: attr._make.and_:5 of
+msgid "Arbitrary number of validators."
+msgstr ""
+
+#: ../../api.rst:598
+msgid ""
+"For convenience, it's also possible to pass a list to `attrs.field`'s "
+"validator argument."
+msgstr ""
+
+#: ../../api.rst:600 ../../api.rst:755
+msgid "Thus the following two statements are equivalent::"
+msgstr ""
+
+#: attr.validators.not_:1 of
+msgid ""
+"A validator that wraps and logically 'inverts' the validator passed to "
+"it. It will raise a `ValueError` if the provided validator *doesn't* "
+"raise a `ValueError` or `TypeError` (by default), and will suppress the "
+"exception if the provided validator *does*."
+msgstr ""
+
+#: attr.validators.not_:6 of
+msgid ""
+"Intended to be used with existing validators to compose logic without "
+"needing to create inverted variants, for example, ``not_(in_(...))``."
+msgstr ""
+
+#: attr.validators.not_:9 of
+msgid "A validator to be logically inverted."
+msgstr ""
+
+#: attr.validators.not_:10 of
+msgid ""
+"Message to raise if validator fails. Formatted with keys ``exc_types`` "
+"and ``validator``."
+msgstr ""
+
+#: attr.validators.not_:13 of
+msgid ""
+"Exception type(s) to capture. Other types raised by child validators will"
+" not be intercepted and pass through."
+msgstr ""
+
+#: attr.validators.not_:17 of
+msgid ""
+"With a human readable error message, the attribute (of type "
+"`attrs.Attribute`), the validator that failed to raise an exception, the "
+"value it got, and the expected exception types."
+msgstr ""
+
+#: attr.validators.optional:1 of
+msgid ""
+"A validator that makes an attribute optional.  An optional attribute is "
+"one which can be set to ``None`` in addition to satisfying the "
+"requirements of the sub-validator."
+msgstr ""
+
+#: attr.validators.optional:5 of
+msgid ""
+"A validator (or a list of validators) that is used for non-``None`` "
+"values."
+msgstr ""
+
+#: attr.validators.optional:10 of
+msgid "*validator* can be a list of validators."
+msgstr ""
+
+#: attr.validators.is_callable:1 of
+msgid ""
+"A validator that raises a `attr.exceptions.NotCallableError` if the "
+"initializer is called with a value for this particular attribute that is "
+"not callable."
+msgstr ""
+
+#: attr.validators.is_callable:7 of
+msgid ""
+"With a human readable error message containing the attribute "
+"(`attrs.Attribute`) name, and the value it got."
+msgstr ""
+
+#: attr.validators.matches_re:1 of
+msgid ""
+"A validator that raises `ValueError` if the initializer is called with a "
+"string that doesn't match *regex*."
+msgstr ""
+
+#: attr.validators.matches_re:4 of
+msgid "a regex string or precompiled pattern to match against"
+msgstr ""
+
+#: attr.validators.matches_re:5 of
+msgid "flags that will be passed to the underlying re function (default 0)"
+msgstr ""
+
+#: attr.validators.matches_re:7 of
+msgid ""
+"which underlying `re` function to call. Valid options are `re.fullmatch`,"
+" `re.search`, and `re.match`; the default ``None`` means `re.fullmatch`. "
+"For performance reasons, the pattern is always precompiled using "
+"`re.compile`."
+msgstr ""
+
+#: attr.validators.matches_re:13 of
+msgid "*regex* can be a pre-compiled pattern."
+msgstr ""
+
+#: attr.validators.deep_iterable:1 of
+msgid "A validator that performs deep validation of an iterable."
+msgstr ""
+
+#: attr.validators.deep_iterable:3 of
+msgid "Validator(s) to apply to iterable members"
+msgstr ""
+
+#: attr.validators.deep_iterable:4 of
+msgid "Validator to apply to iterable itself (optional)"
+msgstr ""
+
+#: attr.validators.deep_iterable:9 attr.validators.deep_mapping:10 of
+msgid "if any sub-validators fail"
+msgstr ""
+
+#: attr.validators.deep_mapping:1 of
+msgid "A validator that performs deep validation of a dictionary."
+msgstr ""
+
+#: attr.validators.deep_mapping:3 of
+msgid "Validator to apply to dictionary keys"
+msgstr ""
+
+#: attr.validators.deep_mapping:4 of
+msgid "Validator to apply to dictionary values"
+msgstr ""
+
+#: attr.validators.deep_mapping:5 of
+msgid "Validator to apply to top-level mapping attribute (optional)"
+msgstr ""
+
+#: ../../api.rst:737
+msgid "Validators can be both globally and locally disabled:"
+msgstr ""
+
+#: attr.validators.set_disabled:1 of
+msgid "Globally disable or enable running validators."
+msgstr ""
+
+#: attr.validators.set_disabled:3 of
+msgid "By default, they are run."
+msgstr ""
+
+#: attr.validators.set_disabled:5 of
+msgid "If ``True``, disable running all validators."
+msgstr ""
+
+#: attr.validators.set_disabled:10 of
+msgid "This function is not thread-safe!"
+msgstr ""
+
+#: attr.validators.get_disabled:1 of
+msgid "Return a bool indicating whether validators are currently disabled or not."
+msgstr ""
+
+#: attr.validators.get_disabled:3 of
+msgid "``True`` if validators are currently disabled."
+msgstr ""
+
+#: attr.validators.disabled:1 of
+msgid "Context manager that disables running validators within its context."
+msgstr ""
+
+#: attr.validators.disabled:5 of
+msgid "This context manager is not thread-safe!"
+msgstr ""
+
+#: ../../api.rst:747
+msgid "Converters"
+msgstr ""
+
+#: ../../api.rst:749
+msgid ""
+"All objects from ``attrs.converters`` are also available from "
+"``attr.converters``."
+msgstr ""
+
+#: attr._make.pipe:1 of
+msgid "A converter that composes multiple converters into one."
+msgstr ""
+
+#: attr._make.pipe:3 of
+msgid ""
+"When called on a value, it runs all wrapped converters, returning the "
+"*last* value."
+msgstr ""
+
+#: attr._make.pipe:6 of
+msgid ""
+"Type annotations will be inferred from the wrapped converters', if they "
+"have any."
+msgstr ""
+
+#: attr._make.pipe:9 of
+msgid "Arbitrary number of converters."
+msgstr ""
+
+#: ../../api.rst:753
+msgid ""
+"For convenience, it's also possible to pass a list to `attr.ib`'s "
+"converter argument."
+msgstr ""
+
+#: attr.converters.optional:1 of
+msgid ""
+"A converter that allows an attribute to be optional. An optional "
+"attribute is one which can be set to ``None``."
+msgstr ""
+
+#: attr.converters.optional:4 of
+msgid ""
+"Type annotations will be inferred from the wrapped converter's, if it has"
+" any."
+msgstr ""
+
+#: attr.converters.optional:7 of
+msgid "the converter that is used for non-``None`` values."
+msgstr ""
+
+#: attr.converters.default_if_none:1 of
+msgid ""
+"A converter that allows to replace ``None`` values by *default* or the "
+"result of *factory*."
+msgstr ""
+
+#: attr.converters.default_if_none:4 of
+msgid ""
+"Value to be used if ``None`` is passed. Passing an instance of "
+"`attrs.Factory` is supported, however the ``takes_self`` option is *not*."
+msgstr ""
+
+#: attr.converters.default_if_none:7 of
+msgid ""
+"A callable that takes no parameters whose result is used if ``None`` is "
+"passed."
+msgstr ""
+
+#: attr.converters.default_if_none:10 of
+msgid "If **neither** *default* or *factory* is passed."
+msgstr ""
+
+#: attr.converters.default_if_none:11 of
+msgid "If **both** *default* and *factory* are passed."
+msgstr ""
+
+#: attr.converters.default_if_none:12 of
+msgid "If an instance of `attrs.Factory` is passed with ``takes_self=True``."
+msgstr ""
+
+#: attr.converters.to_bool:1 of
+msgid "Convert \"boolean\" strings (e.g., from env. vars.) to real booleans."
+msgstr ""
+
+#: attr.converters.to_bool:3 of
+msgid "Values mapping to :code:`True`:"
+msgstr ""
+
+#: attr.converters.to_bool:5 of
+msgid ":code:`True`"
+msgstr ""
+
+#: attr.converters.to_bool:6 of
+msgid ":code:`\"true\"` / :code:`\"t\"`"
+msgstr ""
+
+#: attr.converters.to_bool:7 of
+msgid ":code:`\"yes\"` / :code:`\"y\"`"
+msgstr ""
+
+#: attr.converters.to_bool:8 of
+msgid ":code:`\"on\"`"
+msgstr ""
+
+#: attr.converters.to_bool:9 of
+msgid ":code:`\"1\"`"
+msgstr ""
+
+#: attr.converters.to_bool:10 of
+msgid ":code:`1`"
+msgstr ""
+
+#: attr.converters.to_bool:12 of
+msgid "Values mapping to :code:`False`:"
+msgstr ""
+
+#: attr.converters.to_bool:14 of
+msgid ":code:`False`"
+msgstr ""
+
+#: attr.converters.to_bool:15 of
+msgid ":code:`\"false\"` / :code:`\"f\"`"
+msgstr ""
+
+#: attr.converters.to_bool:16 of
+msgid ":code:`\"no\"` / :code:`\"n\"`"
+msgstr ""
+
+#: attr.converters.to_bool:17 of
+msgid ":code:`\"off\"`"
+msgstr ""
+
+#: attr.converters.to_bool:18 of
+msgid ":code:`\"0\"`"
+msgstr ""
+
+#: attr.converters.to_bool:19 of
+msgid ":code:`0`"
+msgstr ""
+
+#: attr.converters.to_bool:21 of
+msgid "for any other value."
+msgstr ""
+
+#: ../../api.rst:815
+msgid "Setters"
+msgstr ""
+
+#: ../../api.rst:817
+msgid ""
+"These are helpers that you can use together with `attrs.define`'s and "
+"`attrs.fields`'s ``on_setattr`` arguments. All setters in "
+"``attrs.setters`` are also available from ``attr.setters``."
+msgstr ""
+
+#: attr.setters.frozen:1 of
+msgid "Prevent an attribute to be modified."
+msgstr ""
+
+#: attr.setters.validate:1 of
+msgid "Run *attrib*'s validator on *new_value* if it has one."
+msgstr ""
+
+#: attr.setters.convert:1 of
+msgid ""
+"Run *attrib*'s converter -- if it has one --  on *new_value* and return "
+"the result."
+msgstr ""
+
+#: attr.setters.pipe:1 of
+msgid "Run all *setters* and return the return value of the last one."
+msgstr ""
+
+#: ../../api.rst:826
+msgid ""
+"Sentinel for disabling class-wide *on_setattr* hooks for certain "
+"attributes."
+msgstr ""
+
+#: ../../api.rst:828
+msgid "Does not work in `attrs.setters.pipe` or within lists."
+msgstr ""
+
+#: ../../api.rst:832
+msgid "For example, only ``x`` is frozen here:"
+msgstr ""
+
+#: ../../api.rst:849
+msgid ""
+"N.B. Please use `attrs.define`'s *frozen* argument (or `attrs.frozen`) to"
+" freeze whole classes; it is more efficient."
+msgstr ""
+
+#: ../../api.rst:853
+msgid "Deprecated APIs"
+msgstr ""
+
+#: ../../api.rst:857
+msgid ""
+"To help you write backward compatible code that doesn't throw warnings on"
+" modern releases, the ``attr`` module has an ``__version_info__`` "
+"attribute as of version 19.2.0. It behaves similarly to "
+"`sys.version_info` and is an instance of `VersionInfo`:"
+msgstr ""
+
+#: attr._version_info.VersionInfo:1 of
+msgid "A version object that can be compared to tuple of length 1--4:"
+msgstr ""
+
+#: ../../api.rst:862
+msgid "With its help you can write code like this:"
+msgstr ""
+
+#: ../../api.rst:877
+msgid ""
+"The serious-business aliases used to be called ``attr.attributes`` and "
+"``attr.attr``. There are no plans to remove them but they shouldn't be "
+"used in new code."
+msgstr ""
+
+#: attr._funcs.assoc:1 of
+msgid "Copy *inst* and apply *changes*."
+msgstr ""
+
+#: attr._funcs.assoc:8 of
+msgid "If *attr_name* couldn't be found on *cls*."
+msgstr ""
+
+#: attr._funcs.assoc:13 of
+msgid ""
+"Use `attrs.evolve` instead if you can. This function will not be removed "
+"du to the slightly different approach compared to `attrs.evolve`."
+msgstr ""
+
